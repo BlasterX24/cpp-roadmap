@@ -25,6 +25,8 @@ Fundamental types references.
 
 Declare int x=10 and print.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int x=10;std::cout<<x<<std::endl;return 0;}
@@ -41,6 +43,8 @@ int main(){int x=10;std::cout<<x<<std::endl;return 0;}
 ### Problem 2
 
 Print sizeof(int).
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -59,6 +63,8 @@ int main(){std::cout<<sizeof(int)<<std::endl;return 0;}
 
 Print sizeof(double).
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<sizeof(double)<<std::endl;return 0;}
@@ -75,6 +81,8 @@ int main(){std::cout<<sizeof(double)<<std::endl;return 0;}
 ### Problem 4
 
 Declare char c='Z' and print.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -93,6 +101,8 @@ Z
 
 Declare bool b=true and print.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){bool b=true;std::cout<<b<<std::endl;return 0;}
@@ -109,6 +119,8 @@ int main(){bool b=true;std::cout<<b<<std::endl;return 0;}
 ### Problem 6
 
 Print sizeof(char).
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -127,6 +139,8 @@ int main(){std::cout<<sizeof(char)<<std::endl;return 0;}
 
 Declare float f=2.5f and print.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){float f=2.5f;std::cout<<f<<std::endl;return 0;}
@@ -143,6 +157,8 @@ int main(){float f=2.5f;std::cout<<f<<std::endl;return 0;}
 ### Problem 8
 
 Use auto for y=42.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -161,6 +177,8 @@ int main(){auto y=42;std::cout<<y<<std::endl;return 0;}
 
 Declare const int MAX=100 and print.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){const int MAX=100;std::cout<<MAX<<std::endl;return 0;}
@@ -177,6 +195,8 @@ int main(){const int MAX=100;std::cout<<MAX<<std::endl;return 0;}
 ### Problem 10
 
 Print sizeof(long long).
+
+**Solution:**
 
 ```
 #include <iostream>

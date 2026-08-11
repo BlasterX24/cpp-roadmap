@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,6 +68,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Animal virtual speak Dog Woof.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Animal{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> <span class="tok-kw">void</span> <span class="tok-fn">speak</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;...&quot;</span>&lt;&lt;std::endl;}};
 <span class="tok-kw">class</span> Dog:<span class="tok-kw">public</span> Animal{<span class="tok-kw">public</span>:<span class="tok-kw">void</span> <span class="tok-fn">speak</span>()<span class="tok-kw">override</span>{std::cout&lt;&lt;<span class="tok-s">&quot;Woof&quot;</span>&lt;&lt;std::endl;}};
@@ -73,6 +77,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Base pointer derived method.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Base{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> <span class="tok-kw">void</span> <span class="tok-fn">show</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;Base&quot;</span>&lt;&lt;std::endl;}};
 <span class="tok-kw">class</span> Derived:<span class="tok-kw">public</span> Base{<span class="tok-kw">public</span>:<span class="tok-kw">void</span> <span class="tok-fn">show</span>()<span class="tok-kw">override</span>{std::cout&lt;&lt;<span class="tok-s">&quot;Derived&quot;</span>&lt;&lt;std::endl;}};
@@ -81,6 +86,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Abstract Shape pure virtual area.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Shape{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> <span class="tok-kw">double</span> <span class="tok-fn">area</span>()=<span class="tok-num">0</span>;};
 <span class="tok-kw">class</span> Circle:<span class="tok-kw">public</span> Shape{<span class="tok-kw">public</span>:<span class="tok-kw">double</span> r;<span class="tok-fn">Circle</span>(<span class="tok-kw">double</span> r):<span class="tok-fn">r</span>(r){}<span class="tok-kw">double</span> <span class="tok-fn">area</span>()<span class="tok-kw">override</span>{<span class="tok-kw">return</span> <span class="tok-num">3.14159</span>*r*r;}};
@@ -89,6 +95,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>Shape->Rectangle area.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Shape{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> <span class="tok-kw">double</span> <span class="tok-fn">area</span>()=<span class="tok-num">0</span>;<span class="tok-kw">virtual</span> ~<span class="tok-fn">Shape</span>(){}};
 <span class="tok-kw">class</span> Rectangle:<span class="tok-kw">public</span> Shape{<span class="tok-kw">public</span>:<span class="tok-kw">double</span> w,h;<span class="tok-fn">Rectangle</span>(<span class="tok-kw">double</span> w,<span class="tok-kw">double</span> h):<span class="tok-fn">w</span>(w),<span class="tok-fn">h</span>(h){}<span class="tok-kw">double</span> <span class="tok-fn">area</span>()<span class="tok-kw">override</span>{<span class="tok-kw">return</span> w*h;}};
@@ -97,6 +104,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Constructor chaining.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Base{<span class="tok-kw">public</span>:<span class="tok-fn">Base</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;Base&quot;</span>&lt;&lt;std::endl;}};
 <span class="tok-kw">class</span> Derived:<span class="tok-kw">public</span> Base{<span class="tok-kw">public</span>:<span class="tok-fn">Derived</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;Derived&quot;</span>&lt;&lt;std::endl;}};
@@ -106,6 +114,7 @@ Derived</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Slicing problem.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Base{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> <span class="tok-kw">void</span> <span class="tok-fn">type</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;Base&quot;</span>&lt;&lt;std::endl;}};
 <span class="tok-kw">class</span> Derived:<span class="tok-kw">public</span> Base{<span class="tok-kw">public</span>:<span class="tok-kw">void</span> <span class="tok-fn">type</span>()<span class="tok-kw">override</span>{std::cout&lt;&lt;<span class="tok-s">&quot;Derived&quot;</span>&lt;&lt;std::endl;}};
@@ -114,6 +123,7 @@ Derived</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Virtual destructor.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Base{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> ~<span class="tok-fn">Base</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;~Base&quot;</span>&lt;&lt;std::endl;}};
 <span class="tok-kw">class</span> Derived:<span class="tok-kw">public</span> Base{<span class="tok-kw">public</span>:~<span class="tok-fn">Derived</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;~Derived&quot;</span>&lt;&lt;std::endl;}};
@@ -123,6 +133,7 @@ Derived</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Vehicle->Car printInfo.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">class</span> Vehicle{<span class="tok-kw">public</span>:std::<span class="tok-kw">string</span> brand;<span class="tok-fn">Vehicle</span>(std::<span class="tok-kw">string</span> b):<span class="tok-fn">brand</span>(b){}<span class="tok-kw">virtual</span> <span class="tok-kw">void</span> <span class="tok-fn">printInfo</span>(){std::cout&lt;&lt;brand&lt;&lt;std::endl;}};
@@ -132,6 +143,7 @@ Derived</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Dynamic_cast downcast.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Base{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> ~<span class="tok-fn">Base</span>(){}};
 <span class="tok-kw">class</span> Derived:<span class="tok-kw">public</span> Base{<span class="tok-kw">public</span>:<span class="tok-kw">int</span> x=<span class="tok-num">10</span>;};
@@ -140,6 +152,7 @@ Derived</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Pure virtual interface.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Interface{<span class="tok-kw">public</span>:<span class="tok-kw">virtual</span> <span class="tok-kw">void</span> <span class="tok-fn">execute</span>()=<span class="tok-num">0</span>;};
 <span class="tok-kw">class</span> Implementation:<span class="tok-kw">public</span> Interface{<span class="tok-kw">public</span>:<span class="tok-kw">void</span> <span class="tok-fn">execute</span>()<span class="tok-kw">override</span>{std::cout&lt;&lt;<span class="tok-s">&quot;Done&quot;</span>&lt;&lt;std::endl;}};

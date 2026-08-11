@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,6 +68,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Create Hello and print.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;std::cout&lt;&lt;s&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -72,6 +76,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Print length of Programming.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Programming&quot;</span>;std::cout&lt;&lt;s.<span class="tok-fn">length</span>()&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -79,6 +84,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Concatenate strings.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>+std::<span class="tok-kw">string</span>(<span class="tok-s">&quot; World&quot;</span>);std::cout&lt;&lt;s&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -86,6 +92,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>Substring from Hello World.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello World&quot;</span>;std::cout&lt;&lt;s.<span class="tok-fn">substr</span>(<span class="tok-num">6</span>,<span class="tok-num">5</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -93,6 +100,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Find W in Hello World.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello World&quot;</span>;std::cout&lt;&lt;s.<span class="tok-fn">find</span>(<span class="tok-s">&#x27;W&#x27;</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -100,6 +108,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Compare strings.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> a=<span class="tok-s">&quot;abc&quot;</span>,b=<span class="tok-s">&quot;abd&quot;</span>;std::cout&lt;&lt;(a==b?<span class="tok-s">&quot;equal&quot;</span>:<span class="tok-s">&quot;not equal&quot;</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -107,6 +116,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Access third char of Hello.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;std::cout&lt;&lt;s[<span class="tok-num">2</span>]&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -114,6 +124,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Append ! to Hello.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;s+=<span class="tok-s">&quot;!&quot;</span>;std::cout&lt;&lt;s&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -121,6 +132,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Convert to C-string.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 #<span class="tok-kw">include</span> &lt;cstring&gt;
@@ -130,6 +142,7 @@ i</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Check starts with H.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;std::cout&lt;&lt;(s.<span class="tok-fn">find</span>(<span class="tok-s">&#x27;H&#x27;</span>)==<span class="tok-num">0</span>?<span class="tok-s">&quot;yes&quot;</span>:<span class="tok-s">&quot;no&quot;</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>

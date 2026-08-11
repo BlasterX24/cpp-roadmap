@@ -24,6 +24,8 @@ Struct references.
 
 Struct Point x,y.
 
+**Solution:**
+
 ```
 #include <iostream>
 struct Point{int x;int y;};
@@ -42,6 +44,8 @@ int main(){Point p={3,7};std::cout<<p.x<<" "<<p.y<<std::endl;return 0;}
 
 Enum Color GREEN=1.
 
+**Solution:**
+
 ```
 #include <iostream>
 enum Color{RED,GREEN,BLUE};
@@ -59,6 +63,8 @@ int main(){std::cout<<GREEN<<std::endl;return 0;}
 ### Problem 3
 
 Union int/float.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -79,6 +85,8 @@ int main(){Data d;d.i=42;std::cout<<d.i<<std::endl;d.f=3.14f;std::cout<<d.f<<std
 
 typedef alias.
 
+**Solution:**
+
 ```
 #include <iostream>
 typedef int Integer;
@@ -96,6 +104,8 @@ int main(){Integer x=10;std::cout<<x<<std::endl;return 0;}
 ### Problem 5
 
 Bitfield flags.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -115,6 +125,8 @@ int main(){Flags f={1,3};std::cout<<f.active<<" "<<f.mode<<std::endl;return 0;}
 
 Scoped enum class.
 
+**Solution:**
+
 ```
 #include <iostream>
 enum class Direction{North,South,East,West};
@@ -132,6 +144,8 @@ int main(){Direction d=Direction::North;std::cout<<static_cast<int>(d)<<std::end
 ### Problem 7
 
 Struct Rectangle area.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -151,6 +165,8 @@ int main(){Rectangle r={5,3};std::cout<<r.w*r.h<<std::endl;return 0;}
 
 Struct Student print.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -169,6 +185,8 @@ Alice 95
 ### Problem 9
 
 Union as bytes.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -190,6 +208,8 @@ int main(){IntBytes u;u.i=0x41424344;for(int i=0;i<4;i++)std::cout<<(int)u.bytes
 ### Problem 10
 
 using alias double.
+
+**Solution:**
 
 ```
 #include <iostream>

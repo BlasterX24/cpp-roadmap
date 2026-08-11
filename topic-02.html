@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,60 +68,70 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Declare int x=10 and print.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> x=<span class="tok-num">10</span>;std::cout&lt;&lt;x&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>10</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Print sizeof(int).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(<span class="tok-kw">int</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>4</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Print sizeof(double).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(<span class="tok-kw">double</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>8</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>Declare char c='Z' and print.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">char</span> c=<span class="tok-s">&#x27;Z&#x27;</span>;std::cout&lt;&lt;c&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>Z</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Declare bool b=true and print.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">bool</span> b=<span class="tok-kw">true</span>;std::cout&lt;&lt;b&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Print sizeof(char).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(<span class="tok-kw">char</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Declare float f=2.5f and print.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">float</span> f=<span class="tok-num">2.5f</span>;std::cout&lt;&lt;f&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>2.5</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Use auto for y=42.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">auto</span> y=<span class="tok-num">42</span>;std::cout&lt;&lt;y&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>42</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Declare const int MAX=100 and print.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">const</span> <span class="tok-kw">int</span> MAX=<span class="tok-num">100</span>;std::cout&lt;&lt;MAX&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>100</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Print sizeof(long long).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(<span class="tok-kw">long</span> <span class="tok-kw">long</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>8</code></pre></div>

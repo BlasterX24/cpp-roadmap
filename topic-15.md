@@ -25,6 +25,8 @@ Container references.
 
 Vector push 4 print size.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -42,6 +44,8 @@ int main(){std::vector<int> v={1,2,3};v.push_back(4);std::cout<<v.size()<<std::e
 ### Problem 2
 
 Map insert key-value.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -62,6 +66,8 @@ int main(){std::map<std::string,int> m;m["one"]=1;m["two"]=2;std::cout<<m["one"]
 
 Set insert unique.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <set>
@@ -79,6 +85,8 @@ int main(){std::set<int> s;s.insert(3);s.insert(1);s.insert(3);std::cout<<s.size
 ### Problem 4
 
 Stack push/pop.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -98,6 +106,8 @@ int main(){std::stack<int> s;s.push(1);s.push(2);s.push(3);s.pop();std::cout<<s.
 
 Queue push/pop.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <queue>
@@ -115,6 +125,8 @@ int main(){std::queue<int> q;q.push(10);q.push(20);q.push(30);q.pop();std::cout<
 ### Problem 6
 
 Pair creation.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -135,6 +147,8 @@ int main(){std::pair<int,std::string> p(42,"hello");std::cout<<p.first<<" "<<p.s
 
 Vector [] access.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -152,6 +166,8 @@ int main(){std::vector<int> v={10,20,30};std::cout<<v[0]<<" "<<v[2]<<std::endl;r
 ### Problem 8
 
 Vector at().
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -171,6 +187,8 @@ int main(){std::vector<int> v={1,2,3};std::cout<<v.at(1)<<std::endl;return 0;}
 
 Map find check.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <map>
@@ -189,6 +207,8 @@ one
 ### Problem 10
 
 Vector clear empty.
+
+**Solution:**
 
 ```
 #include <iostream>

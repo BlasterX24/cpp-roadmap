@@ -24,6 +24,8 @@ Preprocessor references.
 
 #define constant.
 
+**Solution:**
+
 ```
 #include <iostream>
 #define MAX 100
@@ -42,6 +44,8 @@ int main(){std::cout<<MAX<<std::endl;return 0;}
 
 #define macro function.
 
+**Solution:**
+
 ```
 #include <iostream>
 #define SQUARE(x) ((x)*(x))
@@ -59,6 +63,8 @@ int main(){std::cout<<SQUARE(5)<<std::endl;return 0;}
 ### Problem 3
 
 #ifdef conditional.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -79,6 +85,8 @@ debug
 ### Problem 4
 
 Include guard.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -101,6 +109,8 @@ int main(){std::cout<<getValue()<<std::endl;return 0;}
 
 #undef.
 
+**Solution:**
+
 ```
 #include <iostream>
 #define TEMP 10
@@ -120,6 +130,8 @@ undef
 
 #pragma once.
 
+**Solution:**
+
 ```
 #pragma once
 #include <iostream>
@@ -137,6 +149,8 @@ pragma
 ### Problem 7
 
 Token pasting ##.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -156,6 +170,8 @@ int main(){int MAKE_VAR(1)=10;std::cout<<var_1<<std::endl;return 0;}
 
 Stringize #.
 
+**Solution:**
+
 ```
 #include <iostream>
 #define STR(x) #x
@@ -173,6 +189,8 @@ Hello
 ### Problem 9
 
 Platform conditional.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -195,6 +213,8 @@ Other
 ### Problem 10
 
 Nested ifdef.
+
+**Solution:**
 
 ```
 #include <iostream>

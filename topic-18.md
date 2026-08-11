@@ -24,6 +24,8 @@ Smart pointer references.
 
 unique_ptr manage int.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <memory>
@@ -41,6 +43,8 @@ int main(){std::unique_ptr<int> p=std::make_unique<int>(42);std::cout<<*p<<std::
 ### Problem 2
 
 shared_ptr share string.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -62,6 +66,8 @@ Hello
 
 weak_ptr observe.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <memory>
@@ -80,6 +86,8 @@ int main(){std::weak_ptr<int> wp;{auto sp=std::make_shared<int>(10);wp=sp;std::c
 ### Problem 4
 
 unique_ptr array.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -101,6 +109,8 @@ int main(){auto arr=std::make_unique<int[]>(3);arr[0]=10;arr[1]=20;arr[2]=30;for
 
 unique_ptr move.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <memory>
@@ -120,6 +130,8 @@ int main(){auto p1=std::make_unique<int>(5);auto p2=std::move(p1);std::cout<<(p1
 
 make_shared pair.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <memory>
@@ -138,6 +150,8 @@ int main(){auto p=std::make_shared<std::pair<int,int>>(1,2);std::cout<<p->first<
 ### Problem 7
 
 RAII resource class.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -159,6 +173,8 @@ released
 
 shared_ptr custom deleter.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <memory>
@@ -178,6 +194,8 @@ deleted
 
 weak_ptr lock.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <memory>
@@ -195,6 +213,8 @@ int main(){std::weak_ptr<int> wp;{auto sp=std::make_shared<int>(99);wp=sp;auto l
 ### Problem 10
 
 unique_ptr nullptr check.
+
+**Solution:**
 
 ```
 #include <iostream>

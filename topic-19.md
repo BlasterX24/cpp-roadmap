@@ -24,6 +24,8 @@ Exception references.
 
 Throw int exception.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){try{throw 42;}catch(int e){std::cout<<e<<std::endl;}return 0;}
@@ -40,6 +42,8 @@ int main(){try{throw 42;}catch(int e){std::cout<<e<<std::endl;}return 0;}
 ### Problem 2
 
 Throw string exception.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -59,6 +63,8 @@ error
 
 Throw runtime_error.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <stdexcept>
@@ -77,6 +83,8 @@ boom
 
 Multiple catch blocks.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){try{throw 3.14;}catch(int e){std::cout<<"int"<<std::endl;}catch(double e){std::cout<<"double"<<std::endl;}return 0;}
@@ -94,6 +102,8 @@ double
 
 Catch-all handler.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){try{throw 'x';}catch(...){std::cout<<"caught"<<std::endl;}return 0;}
@@ -110,6 +120,8 @@ caught
 ### Problem 6
 
 Throw negative.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -129,6 +141,8 @@ negative
 ### Problem 7
 
 Custom exception class.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -150,6 +164,8 @@ custom
 
 Exception propagation.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <stdexcept>
@@ -170,6 +186,8 @@ deep
 
 noexcept specifier.
 
+**Solution:**
+
 ```
 #include <iostream>
 void safe()noexcept{std::cout<<"safe"<<std::endl;}
@@ -187,6 +205,8 @@ safe
 ### Problem 10
 
 Re-throw exception.
+
+**Solution:**
 
 ```
 #include <iostream>

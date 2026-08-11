@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,6 +68,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Class Animal speak.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">class</span> Animal{<span class="tok-kw">public</span>:std::<span class="tok-kw">string</span> name;<span class="tok-kw">void</span> <span class="tok-fn">speak</span>(){std::cout&lt;&lt;name&lt;&lt;std::endl;}};
@@ -73,6 +77,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Class Box default constructor.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Box{<span class="tok-kw">public</span>:<span class="tok-kw">int</span> volume;<span class="tok-fn">Box</span>():<span class="tok-fn">volume</span>(<span class="tok-num">0</span>){}};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Box b;std::cout&lt;&lt;b.volume&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -80,6 +85,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Circle with area.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;cmath&gt;
 <span class="tok-kw">class</span> Circle{<span class="tok-kw">public</span>:<span class="tok-kw">double</span> radius;<span class="tok-fn">Circle</span>(<span class="tok-kw">double</span> r):<span class="tok-fn">radius</span>(r){}<span class="tok-kw">double</span> <span class="tok-fn">area</span>(){<span class="tok-kw">return</span> <span class="tok-num">3.14159</span>*radius*radius;}};
@@ -88,6 +94,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>Counter increment/get.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Counter{<span class="tok-kw">private</span>:<span class="tok-kw">int</span> count;<span class="tok-kw">public</span>:<span class="tok-fn">Counter</span>():<span class="tok-fn">count</span>(<span class="tok-num">0</span>){}<span class="tok-kw">void</span> <span class="tok-fn">increment</span>(){count++;}<span class="tok-kw">int</span> <span class="tok-fn">get</span>(){<span class="tok-kw">return</span> count;}};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Counter c;c.<span class="tok-fn">increment</span>();c.<span class="tok-fn">increment</span>();std::cout&lt;&lt;c.<span class="tok-fn">get</span>()&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -95,6 +102,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>This pointer setter.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> MyClass{<span class="tok-kw">public</span>:<span class="tok-kw">int</span> value;MyClass &amp;<span class="tok-fn">setValue</span>(<span class="tok-kw">int</span> v){<span class="tok-kw">this</span>-&gt;value=v;<span class="tok-kw">return</span> *<span class="tok-kw">this</span>;}};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){MyClass obj;obj.<span class="tok-fn">setValue</span>(<span class="tok-num">42</span>);std::cout&lt;&lt;obj.value&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -102,6 +110,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Copy constructor.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Vec2{<span class="tok-kw">public</span>:<span class="tok-kw">int</span> x,y;<span class="tok-fn">Vec2</span>(<span class="tok-kw">int</span> x,<span class="tok-kw">int</span> y):<span class="tok-fn">x</span>(x),<span class="tok-fn">y</span>(y){}<span class="tok-fn">Vec2</span>(<span class="tok-kw">const</span> Vec2 &amp;o):<span class="tok-fn">x</span>(o.x),<span class="tok-fn">y</span>(o.y){}};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Vec2 <span class="tok-fn">a</span>(<span class="tok-num">1</span>,<span class="tok-num">2</span>);Vec2 b=a;std::cout&lt;&lt;b.x&lt;&lt;<span class="tok-s">&quot; &quot;</span>&lt;&lt;b.y&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -109,6 +118,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Static member count.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Obj{<span class="tok-kw">public</span>:<span class="tok-kw">static</span> <span class="tok-kw">int</span> count;<span class="tok-fn">Obj</span>(){count++;}};
 <span class="tok-kw">int</span> Obj::count=<span class="tok-num">0</span>;
@@ -117,6 +127,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Rectangle area/perimeter.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Rectangle{<span class="tok-kw">public</span>:<span class="tok-kw">int</span> w,h;<span class="tok-fn">Rectangle</span>(<span class="tok-kw">int</span> w,<span class="tok-kw">int</span> h):<span class="tok-fn">w</span>(w),<span class="tok-fn">h</span>(h){}<span class="tok-kw">int</span> <span class="tok-fn">area</span>(){<span class="tok-kw">return</span> w*h;}<span class="tok-kw">int</span> <span class="tok-fn">perimeter</span>(){<span class="tok-kw">return</span> <span class="tok-num">2</span>*(w+h);}};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Rectangle <span class="tok-fn">r</span>(<span class="tok-num">4</span>,<span class="tok-num">5</span>);std::cout&lt;&lt;r.<span class="tok-fn">area</span>()&lt;&lt;std::endl;std::cout&lt;&lt;r.<span class="tok-fn">perimeter</span>()&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -125,6 +136,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Const member function.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Point{<span class="tok-kw">public</span>:<span class="tok-kw">int</span> x,y;<span class="tok-fn">Point</span>(<span class="tok-kw">int</span> x,<span class="tok-kw">int</span> y):<span class="tok-fn">x</span>(x),<span class="tok-fn">y</span>(y){}<span class="tok-kw">void</span> <span class="tok-fn">print</span>()<span class="tok-kw">const</span>{std::cout&lt;&lt;x&lt;&lt;<span class="tok-s">&quot;,&quot;</span>&lt;&lt;y&lt;&lt;std::endl;}};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">const</span> Point <span class="tok-fn">p</span>(<span class="tok-num">3</span>,<span class="tok-num">4</span>);p.<span class="tok-fn">print</span>();<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -132,6 +144,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Singleton pattern.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Singleton{<span class="tok-kw">public</span>:<span class="tok-kw">static</span> Singleton&amp; <span class="tok-fn">getInstance</span>(){<span class="tok-kw">static</span> Singleton instance;<span class="tok-kw">return</span> instance;}<span class="tok-kw">void</span> <span class="tok-fn">show</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;Singleton&quot;</span>&lt;&lt;std::endl;}};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Singleton::<span class="tok-fn">getInstance</span>().<span class="tok-fn">show</span>();<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>

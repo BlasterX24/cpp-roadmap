@@ -24,6 +24,8 @@ Control flow references.
 
 Print Even if 4 is even.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int n=4;if(n%2==0)std::cout<<"Even"<<std::endl;else std::cout<<"Odd"<<std::endl;return 0;}
@@ -40,6 +42,8 @@ Even
 ### Problem 2
 
 For loop 1 to 5.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -62,6 +66,8 @@ int main(){for(int i=1;i<=5;i++)std::cout<<i<<std::endl;return 0;}
 
 Print first 5 even numbers.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){for(int i=1;i<=5;i++)std::cout<<i*2<<std::endl;return 0;}
@@ -82,6 +88,8 @@ int main(){for(int i=1;i<=5;i++)std::cout<<i*2<<std::endl;return 0;}
 ### Problem 4
 
 While countdown 5 to 1.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -104,6 +112,8 @@ int main(){int i=5;while(i>=1){std::cout<<i<<std::endl;i--;}return 0;}
 
 Switch day=3 (Monday=1).
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int day=3;switch(day){case 1:std::cout<<"Monday"<<std::endl;break;case 2:std::cout<<"Tuesday"<<std::endl;break;case 3:std::cout<<"Wednesday"<<std::endl;break;default:std::cout<<"Other"<<std::endl;break;}return 0;}
@@ -120,6 +130,8 @@ Wednesday
 ### Problem 6
 
 Break when i=3 (1-5).
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -138,6 +150,8 @@ int main(){for(int i=1;i<=5;i++){if(i==3)break;std::cout<<i<<std::endl;}return 0
 ### Problem 7
 
 Continue skip 3 (1-5).
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -159,6 +173,8 @@ int main(){for(int i=1;i<=5;i++){if(i==3)continue;std::cout<<i<<std::endl;}retur
 
 Do-while 1 to 3.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int i=1;do{std::cout<<i<<std::endl;i++;}while(i<=3);return 0;}
@@ -178,6 +194,8 @@ int main(){int i=1;do{std::cout<<i<<std::endl;i++;}while(i<=3);return 0;}
 
 Print Positive if 7>0.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int n=7;if(n>0)std::cout<<"Positive"<<std::endl;return 0;}
@@ -194,6 +212,8 @@ Positive
 ### Problem 10
 
 Sum 1 to 5 with for loop.
+
+**Solution:**
 
 ```
 #include <iostream>

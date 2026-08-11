@@ -24,6 +24,8 @@ Memory references.
 
 Stack vs heap addresses.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int s=1;int *h=new int(2);std::cout<<"stack: "<<&s<<std::endl;std::cout<<"heap: "<<h<<std::endl;delete h;return 0;}
@@ -40,6 +42,8 @@ stack: 0x
 ### Problem 2
 
 Stack growth direction.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -59,6 +63,8 @@ down
 
 Segment sizes.
 
+**Solution:**
+
 ```
 #include <iostream>
 int gi=1;int gu;
@@ -76,6 +82,8 @@ int main(){int l=1;static int si=1;int *h=new int(1);std::cout<<sizeof(l)<<std::
 ### Problem 4
 
 Function address.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -95,6 +103,8 @@ int main(){std::cout<<(void*)func<<std::endl;return 0;}
 
 Heap allocation speed.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <chrono>
@@ -106,6 +116,8 @@ int main(){auto s=std::chrono::high_resolution_clock::now();for(int i=0;i<100000
 ### Problem 6
 
 Global vs local addr.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -125,6 +137,8 @@ g: 0x
 
 Variable lifetime.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<"lifetime"<<std::endl;return 0;}
@@ -141,6 +155,8 @@ lifetime
 ### Problem 8
 
 Alignment.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -161,6 +177,8 @@ int main(){std::cout<<sizeof(P)<<std::endl;std::cout<<sizeof(A)<<std::endl;retur
 
 Memory regions.
 
+**Solution:**
+
 ```
 #include <iostream>
 int g;
@@ -178,6 +196,8 @@ code: 0x
 ### Problem 10
 
 Static storage.
+
+**Solution:**
 
 ```
 #include <iostream>

@@ -25,6 +25,8 @@ Practice projects.
 
 Contact Book.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -49,6 +51,8 @@ Bob: 456
 
 Calculator operator overloading.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Calc{public:
@@ -72,6 +76,8 @@ int main(){Calc c;std::cout<<c.add(10,5)<<std::endl;std::cout<<c.mul(3,4)<<std::
 
 Matrix class.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -92,6 +98,8 @@ matrix
 
 Linked list template.
 
+**Solution:**
+
 ```
 #include <iostream>
 template<typename T>
@@ -110,6 +118,8 @@ int main(){Node<int> *h=new Node<int>(1);h->next=new Node<int>(2);std::cout<<h->
 ### Problem 5
 
 Run-length compression.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -130,6 +140,8 @@ a3b3c2
 
 Memory pool allocator.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -148,6 +160,8 @@ allocated
 ### Problem 7
 
 Template container.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -174,6 +188,8 @@ int main(){MyCont<int> c;c.push(1);c.push(2);c.push(3);for(auto x:c)std::cout<<x
 
 Smart pointer custom deleter.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <memory>
@@ -194,6 +210,8 @@ rel
 
 PE header parser.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <cstdint>
@@ -213,6 +231,8 @@ sections: 3
 ### Problem 10
 
 Comprehensive review.
+
+**Solution:**
 
 ```
 #include <iostream>

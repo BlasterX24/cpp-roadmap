@@ -25,6 +25,8 @@ Function references.
 
 Function double int value.
 
+**Solution:**
+
 ```
 #include <iostream>
 double doubleValue(int x){return x*2.0;}
@@ -42,6 +44,8 @@ int main(){std::cout<<doubleValue(5)<<std::endl;return 0;}
 ### Problem 2
 
 Function sum two ints.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -61,6 +65,8 @@ int main(){std::cout<<add(3,7)<<std::endl;return 0;}
 
 Function double by reference.
 
+**Solution:**
+
 ```
 #include <iostream>
 void doubleRef(int &x){x*=2;}
@@ -78,6 +84,8 @@ int main(){int a=5;doubleRef(a);std::cout<<a<<std::endl;return 0;}
 ### Problem 4
 
 Overloaded max for int and double.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -99,6 +107,8 @@ int main(){std::cout<<max(3,7)<<std::endl;std::cout<<max(2.5,1.5)<<std::endl;ret
 
 Default parameter greeting.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -118,6 +128,8 @@ Hello, World
 
 Function return larger of two.
 
+**Solution:**
+
 ```
 #include <iostream>
 int maximum(int a,int b){return (a>b)?a:b;}
@@ -135,6 +147,8 @@ int main(){std::cout<<maximum(10,20)<<std::endl;return 0;}
 ### Problem 7
 
 Function sum array.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -154,6 +168,8 @@ int main(){int arr[]={1,2,3};std::cout<<sumArray(arr,3)<<std::endl;return 0;}
 
 Function swap by reference.
 
+**Solution:**
+
 ```
 #include <iostream>
 void swapVals(int &a,int &b){int temp=a;a=b;b=temp;}
@@ -172,6 +188,8 @@ int main(){int x=1,y=2;swapVals(x,y);std::cout<<x<<" "<<y<<std::endl;return 0;}
 
 Inline square function.
 
+**Solution:**
+
 ```
 #include <iostream>
 inline int square(int x){return x*x;}
@@ -189,6 +207,8 @@ int main(){std::cout<<square(4)<<std::endl;return 0;}
 ### Problem 10
 
 Recursive factorial(5).
+
+**Solution:**
 
 ```
 #include <iostream>

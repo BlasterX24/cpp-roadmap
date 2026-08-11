@@ -25,6 +25,8 @@ String references.
 
 Create Hello and print.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -42,6 +44,8 @@ Hello
 ### Problem 2
 
 Print length of Programming.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -61,6 +65,8 @@ int main(){std::string s="Programming";std::cout<<s.length()<<std::endl;return 0
 
 Concatenate strings.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -78,6 +84,8 @@ Hello World
 ### Problem 4
 
 Substring from Hello World.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -97,6 +105,8 @@ World
 
 Find W in Hello World.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -114,6 +124,8 @@ int main(){std::string s="Hello World";std::cout<<s.find('W')<<std::endl;return 
 ### Problem 6
 
 Compare strings.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -133,6 +145,8 @@ not equal
 
 Access third char of Hello.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -151,6 +165,8 @@ l
 
 Append ! to Hello.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -168,6 +184,8 @@ Hello!
 ### Problem 9
 
 Convert to C-string.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -188,6 +206,8 @@ i
 ### Problem 10
 
 Check starts with H.
+
+**Solution:**
 
 ```
 #include <iostream>

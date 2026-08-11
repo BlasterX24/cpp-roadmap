@@ -24,6 +24,8 @@ WinAPI references.
 
 MessageBox.
 
+**Solution:**
+
 ```
 #include <windows.h>
 int WINAPI WinMain(HINSTANCE h,HINSTANCE p,LPSTR cmd,int show){MessageBox(NULL,"Hello RE","Title",MB_OK);return 0;}
@@ -34,6 +36,8 @@ int WINAPI WinMain(HINSTANCE h,HINSTANCE p,LPSTR cmd,int show){MessageBox(NULL,"
 ### Problem 2
 
 CreateFile open.
+
+**Solution:**
 
 ```
 #include <windows.h>
@@ -53,6 +57,8 @@ opened
 
 ReadFile content.
 
+**Solution:**
+
 ```
 #include <windows.h>
 #include <iostream>
@@ -64,6 +70,8 @@ int main(){HANDLE h=CreateFile("test.txt",GENERIC_READ,0,NULL,OPEN_EXISTING,0,NU
 ### Problem 4
 
 GetModuleHandle.
+
+**Solution:**
 
 ```
 #include <windows.h>
@@ -77,6 +85,8 @@ int main(){HMODULE h=GetModuleHandle(NULL);std::cout<<h<<std::endl;return 0;}
 
 GetCurrentProcessId.
 
+**Solution:**
+
 ```
 #include <windows.h>
 #include <iostream>
@@ -88,6 +98,8 @@ int main(){std::cout<<GetCurrentProcessId()<<std::endl;return 0;}
 ### Problem 6
 
 GetLastError.
+
+**Solution:**
 
 ```
 #include <windows.h>
@@ -107,6 +119,8 @@ int main(){CreateFile("noexist.txt",GENERIC_READ,0,NULL,OPEN_EXISTING,0,NULL);st
 
 GetSystemInfo.
 
+**Solution:**
+
 ```
 #include <windows.h>
 #include <iostream>
@@ -118,6 +132,8 @@ int main(){SYSTEM_INFO si;GetSystemInfo(&si);std::cout<<si.dwNumberOfProcessors<
 ### Problem 8
 
 VirtualAlloc.
+
+**Solution:**
 
 ```
 #include <windows.h>
@@ -137,6 +153,8 @@ allocated
 
 FindWindow.
 
+**Solution:**
+
 ```
 #include <windows.h>
 #include <iostream>
@@ -154,6 +172,8 @@ not found
 ### Problem 10
 
 GetVersionEx.
+
+**Solution:**
 
 ```
 #include <windows.h>

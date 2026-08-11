@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,6 +68,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Contact Book.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">vector</span>&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
@@ -78,6 +82,7 @@ Bob: 456</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Calculator operator overloading.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">class</span> Calc{<span class="tok-kw">public</span>:
 <span class="tok-kw">double</span> <span class="tok-fn">add</span>(<span class="tok-kw">double</span> a,<span class="tok-kw">double</span> b){<span class="tok-kw">return</span> a+b;}
@@ -90,6 +95,7 @@ Bob: 456</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Matrix class.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">vector</span>&gt;
 <span class="tok-kw">class</span> Matrix{std::<span class="tok-kw">vector</span>&lt;std::<span class="tok-kw">vector</span>&lt;<span class="tok-kw">int</span>&gt;&gt; d;<span class="tok-kw">public</span>:
@@ -99,6 +105,7 @@ Bob: 456</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>Linked list template.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">template</span>&lt;<span class="tok-kw">typename</span> T&gt;
 <span class="tok-kw">class</span> Node{<span class="tok-kw">public</span>:T data;Node *next;<span class="tok-fn">Node</span>(T d):<span class="tok-fn">data</span>(d),<span class="tok-fn">next</span>(<span class="tok-kw">nullptr</span>){}};
@@ -107,6 +114,7 @@ Bob: 456</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Run-length compression.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 std::<span class="tok-kw">string</span> <span class="tok-fn">compress</span>(<span class="tok-kw">const</span> std::<span class="tok-kw">string</span> &amp;s){std::<span class="tok-kw">string</span> r;<span class="tok-kw">int</span> i=<span class="tok-num">0</span>;<span class="tok-kw">while</span>(i&lt;(<span class="tok-kw">int</span>)s.<span class="tok-fn">length</span>()){<span class="tok-kw">char</span> c=s[i];<span class="tok-kw">int</span> cnt=<span class="tok-num">1</span>;<span class="tok-kw">while</span>(i+cnt&lt;(<span class="tok-kw">int</span>)s.<span class="tok-fn">length</span>()&amp;&amp;s[i+cnt]==c)cnt++;r+=c;<span class="tok-kw">if</span>(cnt&gt;<span class="tok-num">1</span>)r+=std::<span class="tok-fn">to_string</span>(cnt);i+=cnt;}<span class="tok-kw">return</span> r;}
@@ -115,6 +123,7 @@ std::<span class="tok-kw">string</span> <span class="tok-fn">compress</span>(<sp
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Memory pool allocator.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">vector</span>&gt;
 <span class="tok-kw">class</span> Pool{std::<span class="tok-kw">vector</span>&lt;<span class="tok-kw">char</span>&gt; m;<span class="tok-kw">public</span>:<span class="tok-fn">Pool</span>(<span class="tok-kw">int</span> s):<span class="tok-fn">m</span>(s){}<span class="tok-kw">void</span> *<span class="tok-fn">alloc</span>(<span class="tok-kw">int</span> s){<span class="tok-kw">return</span> (<span class="tok-kw">void</span>*)m.<span class="tok-fn">data</span>();}};
@@ -123,6 +132,7 @@ std::<span class="tok-kw">string</span> <span class="tok-fn">compress</span>(<sp
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Template container.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">vector</span>&gt;
 <span class="tok-kw">template</span>&lt;<span class="tok-kw">typename</span> T&gt;
@@ -137,6 +147,7 @@ std::<span class="tok-kw">string</span> <span class="tok-fn">compress</span>(<sp
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Smart pointer custom deleter.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;memory&gt;
 <span class="tok-kw">struct</span> R{<span class="tok-fn">R</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;acq&quot;</span>&lt;&lt;std::endl;}~<span class="tok-fn">R</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;rel&quot;</span>&lt;&lt;std::endl;}};
@@ -146,6 +157,7 @@ rel</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>PE header parser.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;cstdint&gt;
 <span class="tok-kw">struct</span> PE{uint16_t machine;uint16_t sections;};
@@ -155,6 +167,7 @@ sections: 3</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Comprehensive review.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">vector</span>&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;

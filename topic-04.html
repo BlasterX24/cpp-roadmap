@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,12 +68,14 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Print Even if 4 is even.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> n=<span class="tok-num">4</span>;<span class="tok-kw">if</span>(n%<span class="tok-num">2</span>==<span class="tok-num">0</span>)std::cout&lt;&lt;<span class="tok-s">&quot;Even&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">else</span> std::cout&lt;&lt;<span class="tok-s">&quot;Odd&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>Even</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>For loop 1 to 5.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">1</span>;i&lt;=<span class="tok-num">5</span>;i++)std::cout&lt;&lt;i&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1
@@ -81,6 +86,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Print first 5 even numbers.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">1</span>;i&lt;=<span class="tok-num">5</span>;i++)std::cout&lt;&lt;i*<span class="tok-num">2</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>2
@@ -91,6 +97,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>While countdown 5 to 1.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> i=<span class="tok-num">5</span>;<span class="tok-kw">while</span>(i&gt;=<span class="tok-num">1</span>){std::cout&lt;&lt;i&lt;&lt;std::endl;i--;}<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>5
@@ -101,12 +108,14 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Switch day=3 (Monday=1).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> day=<span class="tok-num">3</span>;<span class="tok-kw">switch</span>(day){<span class="tok-kw">case</span> <span class="tok-num">1</span>:std::cout&lt;&lt;<span class="tok-s">&quot;Monday&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">break</span>;<span class="tok-kw">case</span> <span class="tok-num">2</span>:std::cout&lt;&lt;<span class="tok-s">&quot;Tuesday&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">break</span>;<span class="tok-kw">case</span> <span class="tok-num">3</span>:std::cout&lt;&lt;<span class="tok-s">&quot;Wednesday&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">break</span>;<span class="tok-kw">default</span>:std::cout&lt;&lt;<span class="tok-s">&quot;Other&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">break</span>;}<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>Wednesday</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Break when i=3 (1-5).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">1</span>;i&lt;=<span class="tok-num">5</span>;i++){<span class="tok-kw">if</span>(i==<span class="tok-num">3</span>)<span class="tok-kw">break</span>;std::cout&lt;&lt;i&lt;&lt;std::endl;}<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1
@@ -114,6 +123,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Continue skip 3 (1-5).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">1</span>;i&lt;=<span class="tok-num">5</span>;i++){<span class="tok-kw">if</span>(i==<span class="tok-num">3</span>)<span class="tok-kw">continue</span>;std::cout&lt;&lt;i&lt;&lt;std::endl;}<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1
@@ -123,6 +133,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Do-while 1 to 3.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> i=<span class="tok-num">1</span>;<span class="tok-kw">do</span>{std::cout&lt;&lt;i&lt;&lt;std::endl;i++;}<span class="tok-kw">while</span>(i&lt;=<span class="tok-num">3</span>);<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1
@@ -131,12 +142,14 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Print Positive if 7>0.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> n=<span class="tok-num">7</span>;<span class="tok-kw">if</span>(n&gt;<span class="tok-num">0</span>)std::cout&lt;&lt;<span class="tok-s">&quot;Positive&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>Positive</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Sum 1 to 5 with for loop.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> sum=<span class="tok-num">0</span>;<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">1</span>;i&lt;=<span class="tok-num">5</span>;i++)sum+=i;std::cout&lt;&lt;sum&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>15</code></pre></div>

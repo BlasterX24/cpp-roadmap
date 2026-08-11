@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,6 +68,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Struct Point x,y.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">struct</span> Point{<span class="tok-kw">int</span> x;<span class="tok-kw">int</span> y;};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Point p={<span class="tok-num">3</span>,<span class="tok-num">7</span>};std::cout&lt;&lt;p.x&lt;&lt;<span class="tok-s">&quot; &quot;</span>&lt;&lt;p.y&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -72,6 +76,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Enum Color GREEN=1.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">enum</span> Color{RED,GREEN,BLUE};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;GREEN&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -79,6 +84,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Union int/float.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">union</span> Data{<span class="tok-kw">int</span> i;<span class="tok-kw">float</span> f;};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Data d;d.i=<span class="tok-num">42</span>;std::cout&lt;&lt;d.i&lt;&lt;std::endl;d.f=<span class="tok-num">3.14f</span>;std::cout&lt;&lt;d.f&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -87,6 +93,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>typedef alias.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">typedef</span> <span class="tok-kw">int</span> Integer;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Integer x=<span class="tok-num">10</span>;std::cout&lt;&lt;x&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -94,6 +101,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Bitfield flags.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">struct</span> Flags{<span class="tok-kw">unsigned</span> <span class="tok-kw">int</span> active:<span class="tok-num">1</span>;<span class="tok-kw">unsigned</span> <span class="tok-kw">int</span> mode:<span class="tok-num">2</span>;};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Flags f={<span class="tok-num">1</span>,<span class="tok-num">3</span>};std::cout&lt;&lt;f.active&lt;&lt;<span class="tok-s">&quot; &quot;</span>&lt;&lt;f.mode&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -101,6 +109,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Scoped enum class.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">enum</span> <span class="tok-kw">class</span> Direction{North,South,East,West};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Direction d=Direction::North;std::cout&lt;&lt;static_cast&lt;<span class="tok-kw">int</span>&gt;(d)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -108,6 +117,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Struct Rectangle area.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">struct</span> Rectangle{<span class="tok-kw">int</span> w;<span class="tok-kw">int</span> h;};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Rectangle r={<span class="tok-num">5</span>,<span class="tok-num">3</span>};std::cout&lt;&lt;r.w*r.h&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -115,6 +125,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Struct Student print.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
 <span class="tok-kw">struct</span> Student{std::<span class="tok-kw">string</span> name;<span class="tok-kw">int</span> grade;};
@@ -123,6 +134,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Union as bytes.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">union</span> IntBytes{<span class="tok-kw">int</span> i;<span class="tok-kw">unsigned</span> <span class="tok-kw">char</span> bytes[<span class="tok-num">4</span>];};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){IntBytes u;u.i=<span class="tok-num">0x41424344</span>;<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">0</span>;i&lt;<span class="tok-num">4</span>;i++)std::cout&lt;&lt;(<span class="tok-kw">int</span>)u.bytes[i]&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -133,6 +145,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>using alias double.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">using</span> F64=<span class="tok-kw">double</span>;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){F64 pi=<span class="tok-num">3.14159</span>;std::cout&lt;&lt;pi&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>

@@ -24,6 +24,8 @@ Iterator references.
 
 Sort vector.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -47,6 +49,8 @@ int main(){std::vector<int> v={5,3,1,4,2};std::sort(v.begin(),v.end());for(int x
 
 Find 7.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -65,6 +69,8 @@ int main(){std::vector<int> v={3,7,1,9};auto it=std::find(v.begin(),v.end(),7);s
 ### Problem 3
 
 Transform double.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -87,6 +93,8 @@ int main(){std::vector<int> v={1,2,3};std::vector<int> r(3);std::transform(v.beg
 
 Count_if >5.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -105,6 +113,8 @@ int main(){std::vector<int> v={3,8,1,9,4};int c=std::count_if(v.begin(),v.end(),
 ### Problem 5
 
 Reverse vector.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -129,6 +139,8 @@ int main(){std::vector<int> v={1,2,3,4,5};std::reverse(v.begin(),v.end());for(in
 
 For_each print.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -150,6 +162,8 @@ int main(){std::vector<int> v={10,20,30};std::for_each(v.begin(),v.end(),[](int 
 
 Accumulate sum.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -168,6 +182,8 @@ int main(){std::vector<int> v={1,2,3,4,5};int s=std::accumulate(v.begin(),v.end(
 ### Problem 8
 
 Copy vector.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -190,6 +206,8 @@ int main(){std::vector<int> src={1,2,3};std::vector<int> dst(3);std::copy(src.be
 
 Max element.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -208,6 +226,8 @@ int main(){std::vector<int> v={3,1,4,1,5};auto it=std::max_element(v.begin(),v.e
 ### Problem 10
 
 Sort descending lambda.
+
+**Solution:**
 
 ```
 #include <iostream>

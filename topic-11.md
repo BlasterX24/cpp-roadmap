@@ -24,6 +24,8 @@ Classes references.
 
 Class Animal speak.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -43,6 +45,8 @@ Dog
 
 Class Box default constructor.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Box{public:int volume;Box():volume(0){}};
@@ -60,6 +64,8 @@ int main(){Box b;std::cout<<b.volume<<std::endl;return 0;}
 ### Problem 3
 
 Circle with area.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -80,6 +86,8 @@ int main(){Circle c(5);std::cout<<c.area()<<std::endl;return 0;}
 
 Counter increment/get.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Counter{private:int count;public:Counter():count(0){}void increment(){count++;}int get(){return count;}};
@@ -97,6 +105,8 @@ int main(){Counter c;c.increment();c.increment();std::cout<<c.get()<<std::endl;r
 ### Problem 5
 
 This pointer setter.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -116,6 +126,8 @@ int main(){MyClass obj;obj.setValue(42);std::cout<<obj.value<<std::endl;return 0
 
 Copy constructor.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Vec2{public:int x,y;Vec2(int x,int y):x(x),y(y){}Vec2(const Vec2 &o):x(o.x),y(o.y){}};
@@ -133,6 +145,8 @@ int main(){Vec2 a(1,2);Vec2 b=a;std::cout<<b.x<<" "<<b.y<<std::endl;return 0;}
 ### Problem 7
 
 Static member count.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -153,6 +167,8 @@ int main(){Obj a,b,c;std::cout<<Obj::count<<std::endl;return 0;}
 
 Rectangle area/perimeter.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Rectangle{public:int w,h;Rectangle(int w,int h):w(w),h(h){}int area(){return w*h;}int perimeter(){return 2*(w+h);}};
@@ -172,6 +188,8 @@ int main(){Rectangle r(4,5);std::cout<<r.area()<<std::endl;std::cout<<r.perimete
 
 Const member function.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Point{public:int x,y;Point(int x,int y):x(x),y(y){}void print()const{std::cout<<x<<","<<y<<std::endl;}};
@@ -189,6 +207,8 @@ int main(){const Point p(3,4);p.print();return 0;}
 ### Problem 10
 
 Singleton pattern.
+
+**Solution:**
 
 ```
 #include <iostream>

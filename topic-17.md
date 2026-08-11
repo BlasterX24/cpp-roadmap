@@ -24,6 +24,8 @@ Modern C++ references.
 
 Lambda prints Hello Lambda.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){auto greet=[](){std::cout<<"Hello Lambda"<<std::endl;};greet();return 0;}
@@ -40,6 +42,8 @@ Hello Lambda
 ### Problem 2
 
 Lambda adds two ints.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -58,6 +62,8 @@ int main(){auto add=[](int a,int b){return a+b;};std::cout<<add(3,4)<<std::endl;
 
 Auto deduction.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){auto x=42;auto y=3.14;std::cout<<x<<std::endl;std::cout<<y<<std::endl;return 0;}
@@ -75,6 +81,8 @@ int main(){auto x=42;auto y=3.14;std::cout<<x<<std::endl;std::cout<<y<<std::endl
 ### Problem 4
 
 Range-based for.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -98,6 +106,8 @@ int main(){std::vector<int> v={1,2,3,4,5};for(int x:v)std::cout<<x<<std::endl;re
 
 Lambda capture value.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int f=3;auto m=[f](int x){return x*f;};std::cout<<m(5)<<std::endl;return 0;}
@@ -114,6 +124,8 @@ int main(){int f=3;auto m=[f](int x){return x*f;};std::cout<<m(5)<<std::endl;ret
 ### Problem 6
 
 Lambda capture reference.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -132,6 +144,8 @@ int main(){int c=0;auto inc=[&c](){c++;};inc();inc();std::cout<<c<<std::endl;ret
 
 nullptr check.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int *p=nullptr;if(p==nullptr)std::cout<<"null"<<std::endl;return 0;}
@@ -148,6 +162,8 @@ null
 ### Problem 8
 
 Initializer list vector.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -168,6 +184,8 @@ int main(){std::vector<int> v={10,20,30};for(int x:v)std::cout<<x<<std::endl;ret
 ### Problem 9
 
 Lambda comparator sort.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -190,6 +208,8 @@ int main(){std::vector<int> v={5,2,8,1};std::sort(v.begin(),v.end(),[](int a,int
 ### Problem 10
 
 Lambda auto return.
+
+**Solution:**
 
 ```
 #include <iostream>

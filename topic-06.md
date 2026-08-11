@@ -25,6 +25,8 @@ Array references.
 
 Print array {1,2,3,4,5}.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int arr[]={1,2,3,4,5};for(int i=0;i<5;i++)std::cout<<arr[i]<<std::endl;return 0;}
@@ -46,6 +48,8 @@ int main(){int arr[]={1,2,3,4,5};for(int i=0;i<5;i++)std::cout<<arr[i]<<std::end
 
 Print array size.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int arr[]={10,20,30,40,50};std::cout<<sizeof(arr)/sizeof(arr[0])<<std::endl;return 0;}
@@ -62,6 +66,8 @@ int main(){int arr[]={10,20,30,40,50};std::cout<<sizeof(arr)/sizeof(arr[0])<<std
 ### Problem 3
 
 Print strlen of Hello.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -81,6 +87,8 @@ int main(){char str[]="Hello";std::cout<<strlen(str)<<std::endl;return 0;}
 
 Copy string.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <cstring>
@@ -98,6 +106,8 @@ World
 ### Problem 5
 
 Compare strings.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -117,6 +127,8 @@ int main(){std::cout<<strcmp("abc","abd")<<std::endl;return 0;}
 
 Find max in array.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int arr[]={3,7,2,9,4};int max=arr[0];for(int i=1;i<5;i++)if(arr[i]>max)max=arr[i];std::cout<<max<<std::endl;return 0;}
@@ -134,6 +146,8 @@ int main(){int arr[]={3,7,2,9,4};int max=arr[0];for(int i=1;i<5;i++)if(arr[i]>ma
 
 Reverse array.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int arr[]={1,2,3,4,5};for(int i=4;i>=0;i--)std::cout<<arr[i]<<(i>0?" ":"");std::cout<<std::endl;return 0;}
@@ -150,6 +164,8 @@ int main(){int arr[]={1,2,3,4,5};for(int i=4;i>=0;i--)std::cout<<arr[i]<<(i>0?" 
 ### Problem 8
 
 Concatenate strings.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -169,6 +185,8 @@ Hello there
 
 Count vowels in Hello World.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <cstring>
@@ -186,6 +204,8 @@ int main(){char str[]="Hello World";int c=0;for(int i=0;str[i];i++){char ch=str[
 ### Problem 10
 
 2D array print.
+
+**Solution:**
 
 ```
 #include <iostream>

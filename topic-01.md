@@ -26,6 +26,8 @@ Beginner tutorials for C++ setup.
 
 Print 'Hello, World!'.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<"Hello, World!"<<std::endl;return 0;}
@@ -43,6 +45,8 @@ Hello, World!
 
 Print your name.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<"BlasterX24"<<std::endl;return 0;}
@@ -59,6 +63,8 @@ BlasterX24
 ### Problem 3
 
 Print two lines.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -78,6 +84,8 @@ Line 2
 
 Print 7+3.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<7+3<<std::endl;return 0;}
@@ -94,6 +102,8 @@ int main(){std::cout<<7+3<<std::endl;return 0;}
 ### Problem 5
 
 Print A B C on separate lines.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -114,6 +124,8 @@ C
 
 Return 42 from main().
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){return 42;}
@@ -124,6 +136,8 @@ int main(){return 42;}
 ### Problem 7
 
 Print 'C++ C++ C++'.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -142,6 +156,8 @@ C++ C++ C++
 
 Print character 'x'.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<'x'<<std::endl;return 0;}
@@ -159,6 +175,8 @@ x
 
 Print 'Start, End'.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<"Start, End"<<std::endl;return 0;}
@@ -175,6 +193,8 @@ Start, End
 ### Problem 10
 
 Print 3.14.
+
+**Solution:**
 
 ```
 #include <iostream>

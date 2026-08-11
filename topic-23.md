@@ -24,6 +24,8 @@ Bitwise references.
 
 Set bit 3.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int v=0;v|=(1<<3);std::cout<<v<<std::endl;return 0;}
@@ -40,6 +42,8 @@ int main(){int v=0;v|=(1<<3);std::cout<<v<<std::endl;return 0;}
 ### Problem 2
 
 Clear bit 3.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -58,6 +62,8 @@ int main(){int v=0xFF;v&=~(1<<3);std::cout<<v<<std::endl;return 0;}
 
 Toggle bit 0.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int v=5;v^=(1<<0);std::cout<<v<<std::endl;return 0;}
@@ -74,6 +80,8 @@ int main(){int v=5;v^=(1<<0);std::cout<<v<<std::endl;return 0;}
 ### Problem 4
 
 Check bit 2 set.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -92,6 +100,8 @@ int main(){int v=5;bool s=(v&(1<<2))!=0;std::cout<<s<<std::endl;return 0;}
 
 Even/odd check.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int n=4;std::cout<<(n%2==0?"even":"odd")<<std::endl;return 0;}
@@ -109,6 +119,8 @@ even
 
 Count set bits 7.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int n=7;int c=0;while(n){c+=n&1;n>>=1;}std::cout<<c<<std::endl;return 0;}
@@ -125,6 +137,8 @@ int main(){int n=7;int c=0;while(n){c+=n&1;n>>=1;}std::cout<<c<<std::endl;return
 ### Problem 7
 
 Bitset binary 10.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -144,6 +158,8 @@ int main(){std::cout<<std::bitset<8>(10)<<std::endl;return 0;}
 
 XOR swap.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int a=3,b=5;a^=b;b^=a;a^=b;std::cout<<a<<" "<<b<<std::endl;return 0;}
@@ -161,6 +177,8 @@ int main(){int a=3,b=5;a^=b;b^=a;a^=b;std::cout<<a<<" "<<b<<std::endl;return 0;}
 
 Extract byte 1.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int v=0x12345678;int b=(v>>8)&0xFF;std::cout<<std::hex<<b<<std::endl;return 0;}
@@ -177,6 +195,8 @@ int main(){int v=0x12345678;int b=(v>>8)&0xFF;std::cout<<std::hex<<b<<std::endl;
 ### Problem 10
 
 Power of 2 check.
+
+**Solution:**
 
 ```
 #include <iostream>

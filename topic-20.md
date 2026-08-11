@@ -24,6 +24,8 @@ File I/O references.
 
 Write to file.
 
+**Solution:**
+
 ```
 #include <fstream>
 int main(){std::ofstream out("test.txt");out<<"Hello File";out.close();return 0;}
@@ -34,6 +36,8 @@ int main(){std::ofstream out("test.txt");out<<"Hello File";out.close();return 0;
 ### Problem 2
 
 Read from file.
+
+**Solution:**
 
 ```
 #include <fstream>
@@ -54,6 +58,8 @@ Hello File
 
 Append to file.
 
+**Solution:**
+
 ```
 #include <fstream>
 int main(){std::ofstream out("test.txt",std::ios::app);out<<"Append";out.close();return 0;}
@@ -64,6 +70,8 @@ int main(){std::ofstream out("test.txt",std::ios::app);out<<"Append";out.close()
 ### Problem 4
 
 Read lines.
+
+**Solution:**
 
 ```
 #include <fstream>
@@ -86,6 +94,8 @@ Line3
 
 Check file opened.
 
+**Solution:**
+
 ```
 #include <fstream>
 #include <iostream>
@@ -104,6 +114,8 @@ failed
 
 Write numbers 1-5.
 
+**Solution:**
+
 ```
 #include <fstream>
 int main(){std::ofstream out("nums.txt");for(int i=1;i<=5;i++)out<<i<<"\n";out.close();return 0;}
@@ -114,6 +126,8 @@ int main(){std::ofstream out("nums.txt");for(int i=1;i<=5;i++)out<<i<<"\n";out.c
 ### Problem 7
 
 Read back numbers.
+
+**Solution:**
 
 ```
 #include <fstream>
@@ -137,6 +151,8 @@ int main(){std::ifstream in("nums.txt");int n;while(in>>n)std::cout<<n<<std::end
 
 Binary write.
 
+**Solution:**
+
 ```
 #include <fstream>
 int main(){int d[]={1,2,3};std::ofstream out("bin.dat",std::ios::binary);out.write((char*)d,sizeof(d));out.close();return 0;}
@@ -147,6 +163,8 @@ int main(){int d[]={1,2,3};std::ofstream out("bin.dat",std::ios::binary);out.wri
 ### Problem 9
 
 Binary read.
+
+**Solution:**
 
 ```
 #include <fstream>
@@ -167,6 +185,8 @@ int main(){int d[3];std::ifstream in("bin.dat",std::ios::binary);in.read((char*)
 ### Problem 10
 
 Check file size.
+
+**Solution:**
 
 ```
 #include <fstream>

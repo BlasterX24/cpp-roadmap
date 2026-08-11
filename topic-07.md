@@ -25,6 +25,8 @@ Pointer references.
 
 Dereference pointer to print.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int x=10;int *p=&x;std::cout<<*p<<std::endl;return 0;}
@@ -41,6 +43,8 @@ int main(){int x=10;int *p=&x;std::cout<<*p<<std::endl;return 0;}
 ### Problem 2
 
 Pointer modifies x 5 to 20.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -59,6 +63,8 @@ int main(){int x=5;int *p=&x;*p=20;std::cout<<x<<std::endl;return 0;}
 
 Print address of variable.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int x=42;std::cout<<&x<<std::endl;return 0;}
@@ -75,6 +81,8 @@ int main(){int x=42;std::cout<<&x<<std::endl;return 0;}
 ### Problem 4
 
 Pointer arithmetic traverse array.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -95,6 +103,8 @@ int main(){int arr[]={10,20,30};int *p=arr;for(int i=0;i<3;i++)std::cout<<*(p+i)
 
 nullptr check.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int *p=nullptr;if(p==nullptr)std::cout<<"null"<<std::endl;return 0;}
@@ -111,6 +121,8 @@ null
 ### Problem 6
 
 Reference modifies variable.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -129,6 +141,8 @@ int main(){int x=5;int &ref=x;ref=15;std::cout<<x<<std::endl;return 0;}
 
 Const pointer.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int x=10;int *const p=&x;std::cout<<*p<<std::endl;return 0;}
@@ -145,6 +159,8 @@ int main(){int x=10;int *const p=&x;std::cout<<*p<<std::endl;return 0;}
 ### Problem 8
 
 Void* points to double.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -163,6 +179,8 @@ int main(){double d=3.14;void *vp=&d;std::cout<<*(double*)vp<<std::endl;return 0
 
 Pointer difference.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int arr[]={10,20,30,40};int *p1=&arr[0];int *p2=&arr[3];std::cout<<p2-p1<<std::endl;return 0;}
@@ -179,6 +197,8 @@ int main(){int arr[]={10,20,30,40};int *p1=&arr[0];int *p2=&arr[3];std::cout<<p2
 ### Problem 10
 
 Swap with pointers.
+
+**Solution:**
 
 ```
 #include <iostream>

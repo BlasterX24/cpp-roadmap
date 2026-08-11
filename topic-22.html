@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,12 +68,14 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Stack vs heap addresses.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> s=<span class="tok-num">1</span>;<span class="tok-kw">int</span> *h=<span class="tok-kw">new</span> <span class="tok-kw">int</span>(<span class="tok-num">2</span>);std::cout&lt;&lt;<span class="tok-s">&quot;stack: &quot;</span>&lt;&lt;&amp;s&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;heap: &quot;</span>&lt;&lt;h&lt;&lt;std::endl;<span class="tok-kw">delete</span> h;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>stack: 0x</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Stack growth direction.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">void</span> <span class="tok-fn">func</span>(<span class="tok-kw">int</span> *prev){<span class="tok-kw">int</span> local;std::cout&lt;&lt;(prev&gt;&amp;local?<span class="tok-s">&quot;down&quot;</span>:<span class="tok-s">&quot;up&quot;</span>)&lt;&lt;std::endl;}
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> f;<span class="tok-fn">func</span>(&amp;f);<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -78,6 +83,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Segment sizes.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> gi=<span class="tok-num">1</span>;<span class="tok-kw">int</span> gu;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> l=<span class="tok-num">1</span>;<span class="tok-kw">static</span> <span class="tok-kw">int</span> si=<span class="tok-num">1</span>;<span class="tok-kw">int</span> *h=<span class="tok-kw">new</span> <span class="tok-kw">int</span>(<span class="tok-num">1</span>);std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(l)&lt;&lt;std::endl;<span class="tok-kw">delete</span> h;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -85,6 +91,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>Function address.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">void</span> <span class="tok-fn">func</span>(){}
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;(<span class="tok-kw">void</span>*)func&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -92,6 +99,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Heap allocation speed.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 #<span class="tok-kw">include</span> &lt;chrono&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">auto</span> s=std::chrono::high_resolution_clock::<span class="tok-fn">now</span>();<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">0</span>;i&lt;<span class="tok-num">1000000</span>;i++){<span class="tok-kw">int</span> *p=<span class="tok-kw">new</span> <span class="tok-kw">int</span>(i);<span class="tok-kw">delete</span> p;}<span class="tok-kw">auto</span> e=std::chrono::high_resolution_clock::<span class="tok-fn">now</span>();std::cout&lt;&lt;std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(e-s).<span class="tok-fn">count</span>()&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -99,6 +107,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Global vs local addr.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> gv=<span class="tok-num">10</span>;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> lv=<span class="tok-num">20</span>;std::cout&lt;&lt;<span class="tok-s">&quot;g: &quot;</span>&lt;&lt;&amp;gv&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;l: &quot;</span>&lt;&lt;&amp;lv&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -106,12 +115,14 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Variable lifetime.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;lifetime&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>lifetime</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Alignment.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">struct</span> P{<span class="tok-kw">char</span> a;<span class="tok-kw">int</span> b;<span class="tok-kw">char</span> c;};<span class="tok-kw">struct</span> A{<span class="tok-kw">int</span> a;<span class="tok-kw">char</span> b;<span class="tok-kw">int</span> c;};
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(P)&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(A)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -120,6 +131,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Memory regions.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> g;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> l;<span class="tok-kw">int</span> *h=<span class="tok-kw">new</span> <span class="tok-kw">int</span>;std::cout&lt;&lt;<span class="tok-s">&quot;code: &quot;</span>&lt;&lt;(<span class="tok-kw">void</span>*)<span class="tok-kw">main</span>&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;data: &quot;</span>&lt;&lt;&amp;g&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;stack: &quot;</span>&lt;&lt;&amp;l&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;heap: &quot;</span>&lt;&lt;h&lt;&lt;std::endl;<span class="tok-kw">delete</span> h;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
@@ -127,6 +139,7 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Static storage.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">void</span> <span class="tok-fn">counter</span>(){<span class="tok-kw">static</span> <span class="tok-kw">int</span> c=<span class="tok-num">0</span>;c++;std::cout&lt;&lt;c&lt;&lt;std::endl;}
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-fn">counter</span>();<span class="tok-fn">counter</span>();<span class="tok-fn">counter</span>();<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>

@@ -24,6 +24,8 @@ Templates references.
 
 Template max.
 
+**Solution:**
+
 ```
 #include <iostream>
 template<typename T>
@@ -44,6 +46,8 @@ int main(){std::cout<<maxValue(3,7)<<std::endl;std::cout<<maxValue(2.5,1.5)<<std
 
 Template swap.
 
+**Solution:**
+
 ```
 #include <iostream>
 template<typename T>
@@ -63,6 +67,8 @@ int main(){int x=1,y=2;mySwap(x,y);std::cout<<x<<" "<<y<<std::endl;return 0;}
 
 Class template Pair.
 
+**Solution:**
+
 ```
 #include <iostream>
 template<typename T,typename U>
@@ -81,6 +87,8 @@ int main(){Pair<int,double> p(42,3.14);std::cout<<p.first<<" "<<p.second<<std::e
 ### Problem 4
 
 Template print array.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -102,6 +110,8 @@ int main(){int arr[]={1,2,3};printArray(arr,3);return 0;}
 ### Problem 5
 
 Template specialization const char*.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -125,6 +135,8 @@ apple
 
 Class template Stack.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <vector>
@@ -146,6 +158,8 @@ int main(){Stack<int> s;s.push(10);s.push(20);std::cout<<s.top()<<std::endl;s.po
 
 Template abs.
 
+**Solution:**
+
 ```
 #include <iostream>
 template<typename T>
@@ -166,6 +180,8 @@ int main(){std::cout<<myAbs(-5)<<std::endl;std::cout<<myAbs(-3.14)<<std::endl;re
 
 Template first element.
 
+**Solution:**
+
 ```
 #include <iostream>
 template<typename T>
@@ -184,6 +200,8 @@ int main(){int arr[]={99,2,3};std::cout<<first(arr)<<std::endl;return 0;}
 ### Problem 9
 
 Template bool specialization.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -207,6 +225,8 @@ false
 ### Problem 10
 
 Non-type template power of 2.
+
+**Solution:**
 
 ```
 #include <iostream>

@@ -31,6 +31,9 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 .problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
       border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
 .problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.sol-label { color:#34d399; font-weight:700; font-size:.82rem; margin:.9rem 0 .35rem;
+      text-transform:uppercase; letter-spacing:.5px; }
+.sol-label::before { content:"✓ "; }
 .expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
       padding:.6rem 1rem; margin:.6rem 0; }
 .expected::before { content:"Expected output:"; display:block; font-size:.8rem;
@@ -65,60 +68,70 @@ p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
 <h2>Practice Problems &amp; Solutions</h2>
 <div class="problem"><h4>Problem 1</h4>
 <p>Print 15/4 integer division.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-num">15</span>/<span class="tok-num">4</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>3</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 2</h4>
 <p>Print 17%5.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-num">17</span>%<span class="tok-num">5</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>2</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 3</h4>
 <p>Print (5>3).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;(<span class="tok-num">5</span>&gt;<span class="tok-num">3</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 4</h4>
 <p>Print 3+4*2.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-num">3</span>+<span class="tok-num">4</span>*<span class="tok-num">2</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>11</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 5</h4>
 <p>Ternary max of 10,20.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> a=<span class="tok-num">10</span>,b=<span class="tok-num">20</span>;std::cout&lt;&lt;(a&gt;b?a:b)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>20</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 6</h4>
 <p>Print 6&3.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;(<span class="tok-num">6</span>&amp;<span class="tok-num">3</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>2</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 7</h4>
 <p>Print 1<<3.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;(<span class="tok-num">1</span>&lt;&lt;<span class="tok-num">3</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>8</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 8</h4>
 <p>Print (5>3&&10>7).</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;(<span class="tok-num">5</span>&gt;<span class="tok-num">3</span>&amp;&amp;<span class="tok-num">10</span>&gt;<span class="tok-num">7</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>1</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 9</h4>
 <p>Print 10/3.0.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-num">10</span>/<span class="tok-num">3.0</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>3.33333</code></pre></div>
 <p class="points"><strong>Learning points:</strong> </p></div>
 <div class="problem"><h4>Problem 10</h4>
 <p>Print 5^3.</p>
+<div class="sol-label">Solution</div>
 <pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
 <span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;(<span class="tok-num">5</span>^<span class="tok-num">3</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
 <div class="expected"><pre><code>6</code></pre></div>

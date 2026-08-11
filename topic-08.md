@@ -24,6 +24,8 @@ Memory references.
 
 Allocate int=42 print free.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int *p=new int(42);std::cout<<*p<<std::endl;delete p;return 0;}
@@ -40,6 +42,8 @@ int main(){int *p=new int(42);std::cout<<*p<<std::endl;delete p;return 0;}
 ### Problem 2
 
 Allocate array 5 ints.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -62,6 +66,8 @@ int main(){int *arr=new int[5]{1,2,3,4,5};for(int i=0;i<5;i++)std::cout<<arr[i]<
 
 Malloc allocate int=99.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <cstdlib>
@@ -80,6 +86,8 @@ int main(){int *p=(int*)malloc(sizeof(int));*p=99;std::cout<<*p<<std::endl;free(
 
 Allocate double=2.718.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){double *p=new double(2.718);std::cout<<*p<<std::endl;delete p;return 0;}
@@ -96,6 +104,8 @@ int main(){double *p=new double(2.718);std::cout<<*p<<std::endl;delete p;return 
 ### Problem 5
 
 Malloc array realloc.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -119,6 +129,8 @@ int main(){int *arr=(int*)malloc(3*sizeof(int));arr[0]=1;arr[1]=2;arr[2]=3;arr=(
 
 Delete then nullptr.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int *p=new int(10);delete p;p=nullptr;if(p==nullptr)std::cout<<"null"<<std::endl;return 0;}
@@ -135,6 +147,8 @@ null
 ### Problem 7
 
 Allocate char array Hi.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -153,6 +167,8 @@ Hi
 
 Sum 3 doubles.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){double *arr=new double[3]{1.1,2.2,3.3};double sum=0;for(int i=0;i<3;i++)sum+=arr[i];std::cout<<sum<<std::endl;delete[] arr;return 0;}
@@ -170,6 +186,8 @@ int main(){double *arr=new double[3]{1.1,2.2,3.3};double sum=0;for(int i=0;i<3;i
 
 Memory leak demo.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int *p=new int(5);std::cout<<*p<<std::endl;return 0;}
@@ -186,6 +204,8 @@ int main(){int *p=new int(5);std::cout<<*p<<std::endl;return 0;}
 ### Problem 10
 
 Malloc char sizeof.
+
+**Solution:**
 
 ```
 #include <iostream>

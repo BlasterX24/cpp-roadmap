@@ -25,6 +25,8 @@ Inheritance references.
 
 Animal virtual speak Dog Woof.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Animal{public:virtual void speak(){std::cout<<"..."<<std::endl;}};
@@ -43,6 +45,8 @@ Woof
 ### Problem 2
 
 Base pointer derived method.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -63,6 +67,8 @@ Derived
 
 Abstract Shape pure virtual area.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Shape{public:virtual double area()=0;};
@@ -82,6 +88,8 @@ int main(){Circle c(5);std::cout<<c.area()<<std::endl;return 0;}
 
 Shape->Rectangle area.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Shape{public:virtual double area()=0;virtual ~Shape(){}};
@@ -100,6 +108,8 @@ int main(){Rectangle r(3,4);std::cout<<r.area()<<std::endl;return 0;}
 ### Problem 5
 
 Constructor chaining.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -121,6 +131,8 @@ Derived
 
 Slicing problem.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Base{public:virtual void type(){std::cout<<"Base"<<std::endl;}};
@@ -139,6 +151,8 @@ Base
 ### Problem 7
 
 Virtual destructor.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -160,6 +174,8 @@ int main(){Base *p=new Derived();delete p;return 0;}
 
 Vehicle->Car printInfo.
 
+**Solution:**
+
 ```
 #include <iostream>
 #include <string>
@@ -180,6 +196,8 @@ Toyota 4
 
 Dynamic_cast downcast.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Base{public:virtual ~Base(){}};
@@ -198,6 +216,8 @@ int main(){Base *b=new Derived();Derived *d=dynamic_cast<Derived*>(b);if(d)std::
 ### Problem 10
 
 Pure virtual interface.
+
+**Solution:**
 
 ```
 #include <iostream>

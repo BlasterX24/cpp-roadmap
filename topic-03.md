@@ -25,6 +25,8 @@ Operators references.
 
 Print 15/4 integer division.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<15/4<<std::endl;return 0;}
@@ -41,6 +43,8 @@ int main(){std::cout<<15/4<<std::endl;return 0;}
 ### Problem 2
 
 Print 17%5.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -59,6 +63,8 @@ int main(){std::cout<<17%5<<std::endl;return 0;}
 
 Print (5>3).
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<(5>3)<<std::endl;return 0;}
@@ -75,6 +81,8 @@ int main(){std::cout<<(5>3)<<std::endl;return 0;}
 ### Problem 4
 
 Print 3+4*2.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -93,6 +101,8 @@ int main(){std::cout<<3+4*2<<std::endl;return 0;}
 
 Ternary max of 10,20.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){int a=10,b=20;std::cout<<(a>b?a:b)<<std::endl;return 0;}
@@ -109,6 +119,8 @@ int main(){int a=10,b=20;std::cout<<(a>b?a:b)<<std::endl;return 0;}
 ### Problem 6
 
 Print 6&3.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -127,6 +139,8 @@ int main(){std::cout<<(6&3)<<std::endl;return 0;}
 
 Print 1<<3.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<(1<<3)<<std::endl;return 0;}
@@ -143,6 +157,8 @@ int main(){std::cout<<(1<<3)<<std::endl;return 0;}
 ### Problem 8
 
 Print (5>3&&10>7).
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -161,6 +177,8 @@ int main(){std::cout<<(5>3&&10>7)<<std::endl;return 0;}
 
 Print 10/3.0.
 
+**Solution:**
+
 ```
 #include <iostream>
 int main(){std::cout<<10/3.0<<std::endl;return 0;}
@@ -177,6 +195,8 @@ int main(){std::cout<<10/3.0<<std::endl;return 0;}
 ### Problem 10
 
 Print 5^3.
+
+**Solution:**
 
 ```
 #include <iostream>

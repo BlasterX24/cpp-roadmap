@@ -24,6 +24,8 @@ Operator references.
 
 Vec2 overloaded +.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Vec2{public:int x,y;Vec2(int x,int y):x(x),y(y){}Vec2 operator+(const Vec2 &o)const{return Vec2(x+o.x,y+o.y);}};
@@ -42,6 +44,8 @@ int main(){Vec2 a(1,2),b(3,4);Vec2 c=a+b;std::cout<<c.x<<" "<<c.y<<std::endl;ret
 
 Overloaded << for Point.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Point{public:int x,y;Point(int x,int y):x(x),y(y){}friend std::ostream &operator<<(std::ostream &os,const Point &p){return os<<"("<<p.x<<","<<p.y<<")";}};
@@ -59,6 +63,8 @@ int main(){Point p(3,4);std::cout<<p<<std::endl;return 0;}
 ### Problem 3
 
 IntArray overloaded [].
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -79,6 +85,8 @@ int main(){IntArray arr={10,20,30};std::cout<<arr[1]<<std::endl;return 0;}
 
 Adder functor ().
 
+**Solution:**
+
 ```
 #include <iostream>
 class Adder{public:int operator()(int a,int b){return a+b;}};
@@ -96,6 +104,8 @@ int main(){Adder add;std::cout<<add(3,4)<<std::endl;return 0;}
 ### Problem 5
 
 Counter prefix ++.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -115,6 +125,8 @@ int main(){Counter c(5);++c;std::cout<<c.val<<std::endl;return 0;}
 
 Overloaded ==.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Vec2{public:int x,y;Vec2(int x,int y):x(x),y(y){}bool operator==(const Vec2 &o)const{return x==o.x&&y==o.y;}};
@@ -132,6 +144,8 @@ int main(){Vec2 a(1,2),b(1,2);std::cout<<(a==b)<<std::endl;return 0;}
 ### Problem 7
 
 Scalar multiplication *.
+
+**Solution:**
 
 ```
 #include <iostream>
@@ -151,6 +165,8 @@ int main(){Vec2 a(2,3);Vec2 b=a*3;std::cout<<b.x<<" "<<b.y<<std::endl;return 0;}
 
 Unary minus.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Vec2{public:int x,y;Vec2(int x,int y):x(x),y(y){}Vec2 operator-()const{return Vec2(-x,-y);}};
@@ -169,6 +185,8 @@ int main(){Vec2 a(3,4);Vec2 b=-a;std::cout<<b.x<<" "<<b.y<<std::endl;return 0;}
 
 Overloaded !=.
 
+**Solution:**
+
 ```
 #include <iostream>
 class Vec2{public:int x,y;Vec2(int x,int y):x(x),y(y){}bool operator==(const Vec2 &o)const{return x==o.x&&y==o.y;}bool operator!=(const Vec2 &o)const{return !(*this==o);}};
@@ -186,6 +204,8 @@ int main(){Vec2 a(1,2),b(3,4);std::cout<<(a!=b)<<std::endl;return 0;}
 ### Problem 10
 
 Overloaded < for sorting.
+
+**Solution:**
 
 ```
 #include <iostream>

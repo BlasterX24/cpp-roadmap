@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topic 7: Pointers & References — C++ Roadmap — A to Z</title>
+<style>/* theme-dark */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+       line-height: 1.8; font-size: 16px; max-width: 900px; margin: 0 auto;
+       padding: 2rem 1.5rem 4rem; background:#0f172a; color:#e2e8f0; }
+h1 { font-size: 1.9rem; margin: 0 0 .4rem; color:#f8fafc; letter-spacing:-.5px; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 .8rem; color:#7dd3fc;
+     border-bottom: 2px solid #1e293b; padding-bottom:.35rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .5rem; color:#a5b4fc; }
+p { margin: .5rem 0; }
+a { color:#93c5fd; text-decoration:none; }
+a:hover { text-decoration:underline; }
+ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+li { margin: .3rem 0; }
+pre { background:#0b1120; border:1px solid #1e293b; border-radius:8px;
+      padding: 1rem 1.2rem; overflow-x:auto; line-height:1.6; font-size:.9rem;
+      white-space:pre; }
+code { font-family:'Cascadia Code','Fira Code','JetBrains Mono',Consolas,monospace; }
+p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
+      border-radius:4px; font-size:.9em; }
+.tok-kw { color:#c084fc; } .tok-fn { color:#fbbf24; } .tok-num { color:#f472b6; }
+.tok-c { color:#64748b; font-style:italic; } .tok-s { color:#34d399; }
+.header { border-bottom:3px solid #334155; padding-bottom:1rem; margin-bottom:2rem; }
+.header .sub { color:#94a3b8; font-size:.95rem; }
+.learn, .concepts { background:#111c31; border:1px solid #1e293b;
+      border-radius:10px; padding:1.2rem 1.5rem; margin:1.2rem 0; }
+.learn a { display:inline-block; margin:.15rem .6rem .15rem 0; }
+.problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
+      border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
+.problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
+      padding:.6rem 1rem; margin:.6rem 0; }
+.expected::before { content:"Expected output:"; display:block; font-size:.8rem;
+      color:#64748b; margin-bottom:.3rem; text-transform:uppercase; letter-spacing:.5px; }
+.expected pre { border:none; padding:0; background:transparent; margin:0; }
+.points { color:#94a3b8; font-size:.92rem; }
+.qa { background:#111c31; border:1px solid #1e293b; border-radius:8px;
+      padding:1rem 1.5rem; margin:1rem 0; }
+.qa .q { color:#fbbf24; font-weight:600; }
+.qa .a { margin-top:.4rem; }
+.index-card { background:#111c31; border:1px solid #1e293b; border-radius:10px;
+      padding:1rem 1.5rem; margin:.8rem 0; display:block; color:#e2e8f0; }
+.index-card:hover { border-color:#38bdf8; text-decoration:none; }
+.index-card .num { color:#38bdf8; font-weight:700; margin-right:.5rem; }
+.index-card .d { color:#94a3b8; font-size:.9rem; }
+.nav { display:flex; justify-content:space-between; gap:1rem; margin:2.5rem 0 0;
+      padding-top:1.2rem; border-top:1px solid #1e293b; font-size:.95rem; }
+.meta { color:#64748b; font-size:.85rem; margin:.3rem 0 2rem; }
+.badge { display:inline-block; background:#1e293b; color:#7dd3fc; padding:.15rem .6rem;
+      border-radius:999px; font-size:.78rem; margin-right:.4rem; }
+@media print { body{background:#fff;color:#111;} pre,.problem,.qa,.learn,.concepts{background:#f8fafc;border-color:#ddd;} }
+</style></head><body>
+<div class="header"><a href="index.html" style="font-size:.85rem">← C++ Roadmap — A to Z index</a>
+<h1>Topic 7: Pointers & References</h1>
+<div class="sub">* and &, pointer arithmetic, null, void*, const</div></div>
+<p>Pointers store memory addresses. * dereferences; & takes address. Pointer arithmetic traverses arrays. nullptr is modern null. void* is generic pointer.</p>
+<div class="learn"><h3>Learn From</h3>
+<p>Pointer references.</p>
+<ul><li>C++ Pointers — https://cplusplus.com/doc/tutorial/pointers/</li></ul></div>
+<div class="concepts"><h3>Key Concepts</h3>
+<ul><li>Pointer declaration</li><li>Dereferencing *</li><li>Address-of &</li><li>Pointer arithmetic</li><li>nullptr</li><li>void* pointer</li><li>const pointers</li><li>References vs pointers</li></ul></div>
+<h2>Practice Problems &amp; Solutions</h2>
+<div class="problem"><h4>Problem 1</h4>
+<p>Dereference pointer to print.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> x=<span class="tok-num">10</span>;<span class="tok-kw">int</span> *p=&amp;x;std::cout&lt;&lt;*p&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>10</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 2</h4>
+<p>Pointer modifies x 5 to 20.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> x=<span class="tok-num">5</span>;<span class="tok-kw">int</span> *p=&amp;x;*p=<span class="tok-num">20</span>;std::cout&lt;&lt;x&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>20</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 3</h4>
+<p>Print address of variable.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> x=<span class="tok-num">42</span>;std::cout&lt;&lt;&amp;x&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>0x</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 4</h4>
+<p>Pointer arithmetic traverse array.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> arr[]={<span class="tok-num">10</span>,<span class="tok-num">20</span>,<span class="tok-num">30</span>};<span class="tok-kw">int</span> *p=arr;<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">0</span>;i&lt;<span class="tok-num">3</span>;i++)std::cout&lt;&lt;*(p+i)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>10
+20
+30</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 5</h4>
+<p>nullptr check.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> *p=<span class="tok-kw">nullptr</span>;<span class="tok-kw">if</span>(p==<span class="tok-kw">nullptr</span>)std::cout&lt;&lt;<span class="tok-s">&quot;null&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>null</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 6</h4>
+<p>Reference modifies variable.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> x=<span class="tok-num">5</span>;<span class="tok-kw">int</span> &amp;ref=x;ref=<span class="tok-num">15</span>;std::cout&lt;&lt;x&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>15</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 7</h4>
+<p>Const pointer.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> x=<span class="tok-num">10</span>;<span class="tok-kw">int</span> *<span class="tok-kw">const</span> p=&amp;x;std::cout&lt;&lt;*p&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>10</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 8</h4>
+<p>Void* points to double.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">double</span> d=<span class="tok-num">3.14</span>;<span class="tok-kw">void</span> *vp=&amp;d;std::cout&lt;&lt;*(<span class="tok-kw">double</span>*)vp&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>3.14</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 9</h4>
+<p>Pointer difference.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> arr[]={<span class="tok-num">10</span>,<span class="tok-num">20</span>,<span class="tok-num">30</span>,<span class="tok-num">40</span>};<span class="tok-kw">int</span> *p1=&amp;arr[<span class="tok-num">0</span>];<span class="tok-kw">int</span> *p2=&amp;arr[<span class="tok-num">3</span>];std::cout&lt;&lt;p2-p1&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>3</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 10</h4>
+<p>Swap with pointers.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">void</span> <span class="tok-fn">swapPtr</span>(<span class="tok-kw">int</span> *a,<span class="tok-kw">int</span> *b){<span class="tok-kw">int</span> temp=*a;*a=*b;*b=temp;}
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> x=<span class="tok-num">1</span>,y=<span class="tok-num">2</span>;<span class="tok-fn">swapPtr</span>(&amp;x,&amp;y);std::cout&lt;&lt;x&lt;&lt;<span class="tok-s">&quot; &quot;</span>&lt;&lt;y&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>2 1</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<h2>Quick Questions &amp; Answers</h2>
+<div class="qa"><div class="q">Q1: Pointer?</div>
+<div class="a"><strong>A:</strong> Stores memory address.</div></div>
+<div class="qa"><div class="q">Q2: * in declaration?</div>
+<div class="a"><strong>A:</strong> Declares pointer type.</div></div>
+<div class="qa"><div class="q">Q3: Pointer vs reference?</div>
+<div class="a"><strong>A:</strong> Pointer can be null/reassigned; reference cannot.</div></div>
+<div class="qa"><div class="q">Q4: nullptr?</div>
+<div class="a"><strong>A:</strong> Modern null pointer constant.</div></div>
+<div class="qa"><div class="q">Q5: void*?</div>
+<div class="a"><strong>A:</strong> Generic pointer, cannot dereference.</div></div>
+<div class="qa"><div class="q">Q6: Pointer arithmetic?</div>
+<div class="a"><strong>A:</strong> Adding/subtracting to move through memory.</div></div>
+<div class="qa"><div class="q">Q7: const int *p?</div>
+<div class="a"><strong>A:</strong> Pointer to const int.</div></div>
+<div class="qa"><div class="q">Q8: int *const p?</div>
+<div class="a"><strong>A:</strong> Const pointer to int.</div></div>
+<div class="qa"><div class="q">Q9: Reference null?</div>
+<div class="a"><strong>A:</strong> No, must refer to valid object.</div></div>
+<div class="qa"><div class="q">Q10: Dangling pointer?</div>
+<div class="a"><strong>A:</strong> Points to freed memory.</div></div>
+<div class="nav"><a href="topic-06.html">← 6. Arrays & C-Strings</a>
+<a href="topic-08.html">→ 8. Dynamic Memory</a></div>
+</body></html>

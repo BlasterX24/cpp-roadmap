@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topic 22: Memory Layout & Internals — C++ Roadmap — A to Z</title>
+<style>/* theme-dark */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+       line-height: 1.8; font-size: 16px; max-width: 900px; margin: 0 auto;
+       padding: 2rem 1.5rem 4rem; background:#0f172a; color:#e2e8f0; }
+h1 { font-size: 1.9rem; margin: 0 0 .4rem; color:#f8fafc; letter-spacing:-.5px; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 .8rem; color:#7dd3fc;
+     border-bottom: 2px solid #1e293b; padding-bottom:.35rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .5rem; color:#a5b4fc; }
+p { margin: .5rem 0; }
+a { color:#93c5fd; text-decoration:none; }
+a:hover { text-decoration:underline; }
+ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+li { margin: .3rem 0; }
+pre { background:#0b1120; border:1px solid #1e293b; border-radius:8px;
+      padding: 1rem 1.2rem; overflow-x:auto; line-height:1.6; font-size:.9rem;
+      white-space:pre; }
+code { font-family:'Cascadia Code','Fira Code','JetBrains Mono',Consolas,monospace; }
+p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
+      border-radius:4px; font-size:.9em; }
+.tok-kw { color:#c084fc; } .tok-fn { color:#fbbf24; } .tok-num { color:#f472b6; }
+.tok-c { color:#64748b; font-style:italic; } .tok-s { color:#34d399; }
+.header { border-bottom:3px solid #334155; padding-bottom:1rem; margin-bottom:2rem; }
+.header .sub { color:#94a3b8; font-size:.95rem; }
+.learn, .concepts { background:#111c31; border:1px solid #1e293b;
+      border-radius:10px; padding:1.2rem 1.5rem; margin:1.2rem 0; }
+.learn a { display:inline-block; margin:.15rem .6rem .15rem 0; }
+.problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
+      border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
+.problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
+      padding:.6rem 1rem; margin:.6rem 0; }
+.expected::before { content:"Expected output:"; display:block; font-size:.8rem;
+      color:#64748b; margin-bottom:.3rem; text-transform:uppercase; letter-spacing:.5px; }
+.expected pre { border:none; padding:0; background:transparent; margin:0; }
+.points { color:#94a3b8; font-size:.92rem; }
+.qa { background:#111c31; border:1px solid #1e293b; border-radius:8px;
+      padding:1rem 1.5rem; margin:1rem 0; }
+.qa .q { color:#fbbf24; font-weight:600; }
+.qa .a { margin-top:.4rem; }
+.index-card { background:#111c31; border:1px solid #1e293b; border-radius:10px;
+      padding:1rem 1.5rem; margin:.8rem 0; display:block; color:#e2e8f0; }
+.index-card:hover { border-color:#38bdf8; text-decoration:none; }
+.index-card .num { color:#38bdf8; font-weight:700; margin-right:.5rem; }
+.index-card .d { color:#94a3b8; font-size:.9rem; }
+.nav { display:flex; justify-content:space-between; gap:1rem; margin:2.5rem 0 0;
+      padding-top:1.2rem; border-top:1px solid #1e293b; font-size:.95rem; }
+.meta { color:#64748b; font-size:.85rem; margin:.3rem 0 2rem; }
+.badge { display:inline-block; background:#1e293b; color:#7dd3fc; padding:.15rem .6rem;
+      border-radius:999px; font-size:.78rem; margin-right:.4rem; }
+@media print { body{background:#fff;color:#111;} pre,.problem,.qa,.learn,.concepts{background:#f8fafc;border-color:#ddd;} }
+</style></head><body>
+<div class="header"><a href="index.html" style="font-size:.85rem">← C++ Roadmap — A to Z index</a>
+<h1>Topic 22: Memory Layout & Internals</h1>
+<div class="sub">stack vs heap, compilation, ELF/PE</div></div>
+<p>Programs have text, data, heap, stack segments. Compilation: preprocess, compile, assemble, link. ELF is Linux; PE is Windows.</p>
+<div class="learn"><h3>Learn From</h3>
+<p>Memory references.</p>
+<ul><li>Memory Model — https://en.cppreference.com/w/cpp/language/memory_model</li></ul></div>
+<div class="concepts"><h3>Key Concepts</h3>
+<ul><li>Text segment</li><li>Data segment</li><li>BSS segment</li><li>Heap</li><li>Stack</li><li>Compilation stages</li><li>ELF and PE formats</li></ul></div>
+<h2>Practice Problems &amp; Solutions</h2>
+<div class="problem"><h4>Problem 1</h4>
+<p>Stack vs heap addresses.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> s=<span class="tok-num">1</span>;<span class="tok-kw">int</span> *h=<span class="tok-kw">new</span> <span class="tok-kw">int</span>(<span class="tok-num">2</span>);std::cout&lt;&lt;<span class="tok-s">&quot;stack: &quot;</span>&lt;&lt;&amp;s&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;heap: &quot;</span>&lt;&lt;h&lt;&lt;std::endl;<span class="tok-kw">delete</span> h;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>stack: 0x</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 2</h4>
+<p>Stack growth direction.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">void</span> <span class="tok-fn">func</span>(<span class="tok-kw">int</span> *prev){<span class="tok-kw">int</span> local;std::cout&lt;&lt;(prev&gt;&amp;local?<span class="tok-s">&quot;down&quot;</span>:<span class="tok-s">&quot;up&quot;</span>)&lt;&lt;std::endl;}
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> f;<span class="tok-fn">func</span>(&amp;f);<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>down</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 3</h4>
+<p>Segment sizes.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> gi=<span class="tok-num">1</span>;<span class="tok-kw">int</span> gu;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> l=<span class="tok-num">1</span>;<span class="tok-kw">static</span> <span class="tok-kw">int</span> si=<span class="tok-num">1</span>;<span class="tok-kw">int</span> *h=<span class="tok-kw">new</span> <span class="tok-kw">int</span>(<span class="tok-num">1</span>);std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(l)&lt;&lt;std::endl;<span class="tok-kw">delete</span> h;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>4</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 4</h4>
+<p>Function address.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">void</span> <span class="tok-fn">func</span>(){}
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;(<span class="tok-kw">void</span>*)func&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>0x</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 5</h4>
+<p>Heap allocation speed.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;chrono&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">auto</span> s=std::chrono::high_resolution_clock::<span class="tok-fn">now</span>();<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">0</span>;i&lt;<span class="tok-num">1000000</span>;i++){<span class="tok-kw">int</span> *p=<span class="tok-kw">new</span> <span class="tok-kw">int</span>(i);<span class="tok-kw">delete</span> p;}<span class="tok-kw">auto</span> e=std::chrono::high_resolution_clock::<span class="tok-fn">now</span>();std::cout&lt;&lt;std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(e-s).<span class="tok-fn">count</span>()&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code></code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 6</h4>
+<p>Global vs local addr.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> gv=<span class="tok-num">10</span>;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> lv=<span class="tok-num">20</span>;std::cout&lt;&lt;<span class="tok-s">&quot;g: &quot;</span>&lt;&lt;&amp;gv&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;l: &quot;</span>&lt;&lt;&amp;lv&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>g: 0x</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 7</h4>
+<p>Variable lifetime.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-s">&quot;lifetime&quot;</span>&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>lifetime</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 8</h4>
+<p>Alignment.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">struct</span> P{<span class="tok-kw">char</span> a;<span class="tok-kw">int</span> b;<span class="tok-kw">char</span> c;};<span class="tok-kw">struct</span> A{<span class="tok-kw">int</span> a;<span class="tok-kw">char</span> b;<span class="tok-kw">int</span> c;};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(P)&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-kw">sizeof</span>(A)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>12
+12</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 9</h4>
+<p>Memory regions.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">int</span> g;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-kw">int</span> l;<span class="tok-kw">int</span> *h=<span class="tok-kw">new</span> <span class="tok-kw">int</span>;std::cout&lt;&lt;<span class="tok-s">&quot;code: &quot;</span>&lt;&lt;(<span class="tok-kw">void</span>*)<span class="tok-kw">main</span>&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;data: &quot;</span>&lt;&lt;&amp;g&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;stack: &quot;</span>&lt;&lt;&amp;l&lt;&lt;std::endl;std::cout&lt;&lt;<span class="tok-s">&quot;heap: &quot;</span>&lt;&lt;h&lt;&lt;std::endl;<span class="tok-kw">delete</span> h;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>code: 0x</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 10</h4>
+<p>Static storage.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">void</span> <span class="tok-fn">counter</span>(){<span class="tok-kw">static</span> <span class="tok-kw">int</span> c=<span class="tok-num">0</span>;c++;std::cout&lt;&lt;c&lt;&lt;std::endl;}
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){<span class="tok-fn">counter</span>();<span class="tok-fn">counter</span>();<span class="tok-fn">counter</span>();<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>1
+2
+3</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<h2>Quick Questions &amp; Answers</h2>
+<div class="qa"><div class="q">Q1: Memory segments?</div>
+<div class="a"><strong>A:</strong> Text, data, BSS, heap, stack.</div></div>
+<div class="qa"><div class="q">Q2: Text?</div>
+<div class="a"><strong>A:</strong> Executable code (read-only).</div></div>
+<div class="qa"><div class="q">Q3: Heap?</div>
+<div class="a"><strong>A:</strong> Dynamic allocation, grows up.</div></div>
+<div class="qa"><div class="q">Q4: Stack?</div>
+<div class="a"><strong>A:</strong> Locals/calls, grows down.</div></div>
+<div class="qa"><div class="q">Q5: ELF?</div>
+<div class="a"><strong>A:</strong> Linux binary format.</div></div>
+<div class="qa"><div class="q">Q6: PE?</div>
+<div class="a"><strong>A:</strong> Windows binary format.</div></div>
+<div class="qa"><div class="q">Q7: Compilation stages?</div>
+<div class="a"><strong>A:</strong> Preprocess, compile, assemble, link.</div></div>
+<div class="qa"><div class="q">Q8: Stack vs heap?</div>
+<div class="a"><strong>A:</strong> Stack fast; heap slow.</div></div>
+<div class="qa"><div class="q">Q9: BSS?</div>
+<div class="a"><strong>A:</strong> Uninitialized globals.</div></div>
+<div class="qa"><div class="q">Q10: Layout for RE?</div>
+<div class="a"><strong>A:</strong> Understanding structure and exploitation.</div></div>
+<div class="nav"><a href="topic-21.html">← 21. Preprocessor</a>
+<a href="topic-23.html">→ 23. Bitwise Operations & Manipulation</a></div>
+</body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C++ Roadmap — A to Z</title>
+<style>/* theme-dark */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+       line-height: 1.8; font-size: 16px; max-width: 900px; margin: 0 auto;
+       padding: 2rem 1.5rem 4rem; background:#0f172a; color:#e2e8f0; }
+h1 { font-size: 1.9rem; margin: 0 0 .4rem; color:#f8fafc; letter-spacing:-.5px; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 .8rem; color:#7dd3fc;
+     border-bottom: 2px solid #1e293b; padding-bottom:.35rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .5rem; color:#a5b4fc; }
+p { margin: .5rem 0; }
+a { color:#93c5fd; text-decoration:none; }
+a:hover { text-decoration:underline; }
+ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+li { margin: .3rem 0; }
+pre { background:#0b1120; border:1px solid #1e293b; border-radius:8px;
+      padding: 1rem 1.2rem; overflow-x:auto; line-height:1.6; font-size:.9rem;
+      white-space:pre; }
+code { font-family:'Cascadia Code','Fira Code','JetBrains Mono',Consolas,monospace; }
+p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
+      border-radius:4px; font-size:.9em; }
+.tok-kw { color:#c084fc; } .tok-fn { color:#fbbf24; } .tok-num { color:#f472b6; }
+.tok-c { color:#64748b; font-style:italic; } .tok-s { color:#34d399; }
+.header { border-bottom:3px solid #334155; padding-bottom:1rem; margin-bottom:2rem; }
+.header .sub { color:#94a3b8; font-size:.95rem; }
+.learn, .concepts { background:#111c31; border:1px solid #1e293b;
+      border-radius:10px; padding:1.2rem 1.5rem; margin:1.2rem 0; }
+.learn a { display:inline-block; margin:.15rem .6rem .15rem 0; }
+.problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
+      border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
+.problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
+      padding:.6rem 1rem; margin:.6rem 0; }
+.expected::before { content:"Expected output:"; display:block; font-size:.8rem;
+      color:#64748b; margin-bottom:.3rem; text-transform:uppercase; letter-spacing:.5px; }
+.expected pre { border:none; padding:0; background:transparent; margin:0; }
+.points { color:#94a3b8; font-size:.92rem; }
+.qa { background:#111c31; border:1px solid #1e293b; border-radius:8px;
+      padding:1rem 1.5rem; margin:1rem 0; }
+.qa .q { color:#fbbf24; font-weight:600; }
+.qa .a { margin-top:.4rem; }
+.index-card { background:#111c31; border:1px solid #1e293b; border-radius:10px;
+      padding:1rem 1.5rem; margin:.8rem 0; display:block; color:#e2e8f0; }
+.index-card:hover { border-color:#38bdf8; text-decoration:none; }
+.index-card .num { color:#38bdf8; font-weight:700; margin-right:.5rem; }
+.index-card .d { color:#94a3b8; font-size:.9rem; }
+.nav { display:flex; justify-content:space-between; gap:1rem; margin:2.5rem 0 0;
+      padding-top:1.2rem; border-top:1px solid #1e293b; font-size:.95rem; }
+.meta { color:#64748b; font-size:.85rem; margin:.3rem 0 2rem; }
+.badge { display:inline-block; background:#1e293b; color:#7dd3fc; padding:.15rem .6rem;
+      border-radius:999px; font-size:.78rem; margin-right:.4rem; }
+@media print { body{background:#fff;color:#111;} pre,.problem,.qa,.learn,.concepts{background:#f8fafc;border-color:#ddd;} }
+</style></head><body>
+<div class="header"><h1>C++ Roadmap — A to Z</h1>
+<div class="sub">25 topics covering C++ from basics to memory, STL & WinAPI for RE</div></div>
+<p class="meta">25 topics · 10 problems + 10 Q&amp;A each ·
+<span class="badge">Learn From</span><span class="badge">Practice</span><span class="badge">Test yourself</span></p>
+<a class="index-card" href="topic-01.html">
+<span class="num">01</span> Setup & First Program
+<div class="d">Installing g++, includes, main(), and cout</div></a><a class="index-card" href="topic-02.html">
+<span class="num">02</span> Variables & Types
+<div class="d">int, char, float, double, bool, sizeof</div></a><a class="index-card" href="topic-03.html">
+<span class="num">03</span> Operators & Expressions
+<div class="d">Arithmetic, bitwise, logical, ternary, type promotion</div></a><a class="index-card" href="topic-04.html">
+<span class="num">04</span> Control Flow
+<div class="d">if/else, switch, for/while/do-while, break/continue</div></a><a class="index-card" href="topic-05.html">
+<span class="num">05</span> Functions
+<div class="d">Params, return, overloading, pass by value/reference, inline</div></a><a class="index-card" href="topic-06.html">
+<span class="num">06</span> Arrays & C-Strings
+<div class="d">Static arrays, char arrays, string functions, bounds</div></a><a class="index-card" href="topic-07.html">
+<span class="num">07</span> Pointers & References
+<div class="d">* and &, pointer arithmetic, null, void*, const</div></a><a class="index-card" href="topic-08.html">
+<span class="num">08</span> Dynamic Memory
+<div class="d">new/delete, malloc/free, memory leaks, RAII</div></a><a class="index-card" href="topic-09.html">
+<span class="num">09</span> Strings (std::string)
+<div class="d">Constructors, methods, concatenation, substr, find</div></a><a class="index-card" href="topic-10.html">
+<span class="num">10</span> Structs & Enums
+<div class="d">struct, enum, union, typedef, bitfields</div></a><a class="index-card" href="topic-11.html">
+<span class="num">11</span> OOP: Classes & Objects
+<div class="d">Constructors, member functions, this, access specifiers</div></a><a class="index-card" href="topic-12.html">
+<span class="num">12</span> OOP: Inheritance & Polymorphism
+<div class="d">Derived classes, virtual, override, pure virtual</div></a><a class="index-card" href="topic-13.html">
+<span class="num">13</span> Operator Overloading
+<div class="d">+ << [] () conversion operators</div></a><a class="index-card" href="topic-14.html">
+<span class="num">14</span> Templates
+<div class="d">Function templates, class templates, specialization</div></a><a class="index-card" href="topic-15.html">
+<span class="num">15</span> STL: Containers
+<div class="d">vector, list, map, set, stack, queue, pair</div></a><a class="index-card" href="topic-16.html">
+<span class="num">16</span> STL: Iterators & Algorithms
+<div class="d">begin/end, sort/find/transform, lambdas</div></a><a class="index-card" href="topic-17.html">
+<span class="num">17</span> Lambda & Modern C++
+<div class="d">Lambdas, auto, range-for, nullptr, initializer lists</div></a><a class="index-card" href="topic-18.html">
+<span class="num">18</span> Smart Pointers & RAII
+<div class="d">unique_ptr, shared_ptr, weak_ptr, scope management</div></a><a class="index-card" href="topic-19.html">
+<span class="num">19</span> Exception Handling
+<div class="d">try/catch/throw, custom exceptions, noexcept</div></a><a class="index-card" href="topic-20.html">
+<span class="num">20</span> File I/O
+<div class="d">fstream, ifstream/ofstream, getline, binary I/O</div></a><a class="index-card" href="topic-21.html">
+<span class="num">21</span> Preprocessor
+<div class="d">#define, #include, macros, conditional compilation</div></a><a class="index-card" href="topic-22.html">
+<span class="num">22</span> Memory Layout & Internals
+<div class="d">stack vs heap, compilation, ELF/PE</div></a><a class="index-card" href="topic-23.html">
+<span class="num">23</span> Bitwise Operations & Manipulation
+<div class="d">bitset, shifts, masks, tricks</div></a><a class="index-card" href="topic-24.html">
+<span class="num">24</span> WinAPI Basics for RE
+<div class="d">MessageBox, CreateFile, ReadProcessMemory, PE</div></a><a class="index-card" href="topic-25.html">
+<span class="num">25</span> Capstone Projects
+<div class="d">10 C++ projects combining all topics</div></a>
+</body></html>

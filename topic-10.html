@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topic 10: Structs & Enums — C++ Roadmap — A to Z</title>
+<style>/* theme-dark */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+       line-height: 1.8; font-size: 16px; max-width: 900px; margin: 0 auto;
+       padding: 2rem 1.5rem 4rem; background:#0f172a; color:#e2e8f0; }
+h1 { font-size: 1.9rem; margin: 0 0 .4rem; color:#f8fafc; letter-spacing:-.5px; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 .8rem; color:#7dd3fc;
+     border-bottom: 2px solid #1e293b; padding-bottom:.35rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .5rem; color:#a5b4fc; }
+p { margin: .5rem 0; }
+a { color:#93c5fd; text-decoration:none; }
+a:hover { text-decoration:underline; }
+ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+li { margin: .3rem 0; }
+pre { background:#0b1120; border:1px solid #1e293b; border-radius:8px;
+      padding: 1rem 1.2rem; overflow-x:auto; line-height:1.6; font-size:.9rem;
+      white-space:pre; }
+code { font-family:'Cascadia Code','Fira Code','JetBrains Mono',Consolas,monospace; }
+p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
+      border-radius:4px; font-size:.9em; }
+.tok-kw { color:#c084fc; } .tok-fn { color:#fbbf24; } .tok-num { color:#f472b6; }
+.tok-c { color:#64748b; font-style:italic; } .tok-s { color:#34d399; }
+.header { border-bottom:3px solid #334155; padding-bottom:1rem; margin-bottom:2rem; }
+.header .sub { color:#94a3b8; font-size:.95rem; }
+.learn, .concepts { background:#111c31; border:1px solid #1e293b;
+      border-radius:10px; padding:1.2rem 1.5rem; margin:1.2rem 0; }
+.learn a { display:inline-block; margin:.15rem .6rem .15rem 0; }
+.problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
+      border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
+.problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
+      padding:.6rem 1rem; margin:.6rem 0; }
+.expected::before { content:"Expected output:"; display:block; font-size:.8rem;
+      color:#64748b; margin-bottom:.3rem; text-transform:uppercase; letter-spacing:.5px; }
+.expected pre { border:none; padding:0; background:transparent; margin:0; }
+.points { color:#94a3b8; font-size:.92rem; }
+.qa { background:#111c31; border:1px solid #1e293b; border-radius:8px;
+      padding:1rem 1.5rem; margin:1rem 0; }
+.qa .q { color:#fbbf24; font-weight:600; }
+.qa .a { margin-top:.4rem; }
+.index-card { background:#111c31; border:1px solid #1e293b; border-radius:10px;
+      padding:1rem 1.5rem; margin:.8rem 0; display:block; color:#e2e8f0; }
+.index-card:hover { border-color:#38bdf8; text-decoration:none; }
+.index-card .num { color:#38bdf8; font-weight:700; margin-right:.5rem; }
+.index-card .d { color:#94a3b8; font-size:.9rem; }
+.nav { display:flex; justify-content:space-between; gap:1rem; margin:2.5rem 0 0;
+      padding-top:1.2rem; border-top:1px solid #1e293b; font-size:.95rem; }
+.meta { color:#64748b; font-size:.85rem; margin:.3rem 0 2rem; }
+.badge { display:inline-block; background:#1e293b; color:#7dd3fc; padding:.15rem .6rem;
+      border-radius:999px; font-size:.78rem; margin-right:.4rem; }
+@media print { body{background:#fff;color:#111;} pre,.problem,.qa,.learn,.concepts{background:#f8fafc;border-color:#ddd;} }
+</style></head><body>
+<div class="header"><a href="index.html" style="font-size:.85rem">← C++ Roadmap — A to Z index</a>
+<h1>Topic 10: Structs & Enums</h1>
+<div class="sub">struct, enum, union, typedef, bitfields</div></div>
+<p>Structs group data. Enums define named constants. Unions share memory. typedef aliases types. Bitfields pack flags into bits.</p>
+<div class="learn"><h3>Learn From</h3>
+<p>Struct references.</p>
+<ul><li>C++ Structs — https://cplusplus.com/doc/tutorial/structures/</li></ul></div>
+<div class="concepts"><h3>Key Concepts</h3>
+<ul><li>Struct declaration</li><li>Struct access</li><li>Enum declaration</li><li>Scoped enums</li><li>Union memory</li><li>typedef and using</li><li>Bitfields</li></ul></div>
+<h2>Practice Problems &amp; Solutions</h2>
+<div class="problem"><h4>Problem 1</h4>
+<p>Struct Point x,y.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">struct</span> Point{<span class="tok-kw">int</span> x;<span class="tok-kw">int</span> y;};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Point p={<span class="tok-num">3</span>,<span class="tok-num">7</span>};std::cout&lt;&lt;p.x&lt;&lt;<span class="tok-s">&quot; &quot;</span>&lt;&lt;p.y&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>3 7</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 2</h4>
+<p>Enum Color GREEN=1.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">enum</span> Color{RED,GREEN,BLUE};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::cout&lt;&lt;GREEN&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>1</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 3</h4>
+<p>Union int/float.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">union</span> Data{<span class="tok-kw">int</span> i;<span class="tok-kw">float</span> f;};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Data d;d.i=<span class="tok-num">42</span>;std::cout&lt;&lt;d.i&lt;&lt;std::endl;d.f=<span class="tok-num">3.14f</span>;std::cout&lt;&lt;d.f&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>42
+3.14</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 4</h4>
+<p>typedef alias.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">typedef</span> <span class="tok-kw">int</span> Integer;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Integer x=<span class="tok-num">10</span>;std::cout&lt;&lt;x&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>10</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 5</h4>
+<p>Bitfield flags.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">struct</span> Flags{<span class="tok-kw">unsigned</span> <span class="tok-kw">int</span> active:<span class="tok-num">1</span>;<span class="tok-kw">unsigned</span> <span class="tok-kw">int</span> mode:<span class="tok-num">2</span>;};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Flags f={<span class="tok-num">1</span>,<span class="tok-num">3</span>};std::cout&lt;&lt;f.active&lt;&lt;<span class="tok-s">&quot; &quot;</span>&lt;&lt;f.mode&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>1 3</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 6</h4>
+<p>Scoped enum class.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">enum</span> <span class="tok-kw">class</span> Direction{North,South,East,West};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Direction d=Direction::North;std::cout&lt;&lt;static_cast&lt;<span class="tok-kw">int</span>&gt;(d)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>0</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 7</h4>
+<p>Struct Rectangle area.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">struct</span> Rectangle{<span class="tok-kw">int</span> w;<span class="tok-kw">int</span> h;};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Rectangle r={<span class="tok-num">5</span>,<span class="tok-num">3</span>};std::cout&lt;&lt;r.w*r.h&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>15</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 8</h4>
+<p>Struct Student print.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">struct</span> Student{std::<span class="tok-kw">string</span> name;<span class="tok-kw">int</span> grade;};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){Student s={<span class="tok-s">&quot;Alice&quot;</span>,<span class="tok-num">95</span>};std::cout&lt;&lt;s.name&lt;&lt;<span class="tok-s">&quot; &quot;</span>&lt;&lt;s.grade&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>Alice 95</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 9</h4>
+<p>Union as bytes.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">union</span> IntBytes{<span class="tok-kw">int</span> i;<span class="tok-kw">unsigned</span> <span class="tok-kw">char</span> bytes[<span class="tok-num">4</span>];};
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){IntBytes u;u.i=<span class="tok-num">0x41424344</span>;<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">0</span>;i&lt;<span class="tok-num">4</span>;i++)std::cout&lt;&lt;(<span class="tok-kw">int</span>)u.bytes[i]&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>68
+67
+66
+65</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 10</h4>
+<p>using alias double.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+<span class="tok-kw">using</span> F64=<span class="tok-kw">double</span>;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){F64 pi=<span class="tok-num">3.14159</span>;std::cout&lt;&lt;pi&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>3.14159</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<h2>Quick Questions &amp; Answers</h2>
+<div class="qa"><div class="q">Q1: struct vs class?</div>
+<div class="a"><strong>A:</strong> Struct public default; class private default.</div></div>
+<div class="qa"><div class="q">Q2: enum purpose?</div>
+<div class="a"><strong>A:</strong> Named integer constants.</div></div>
+<div class="qa"><div class="q">Q3: scoped enum?</div>
+<div class="a"><strong>A:</strong> Values scoped within enum.</div></div>
+<div class="qa"><div class="q">Q4: union memory?</div>
+<div class="a"><strong>A:</strong> All members share same memory.</div></div>
+<div class="qa"><div class="q">Q5: bitfield?</div>
+<div class="a"><strong>A:</strong> Struct member with specified bits.</div></div>
+<div class="qa"><div class="q">Q6: typedef purpose?</div>
+<div class="a"><strong>A:</strong> Alias for existing type.</div></div>
+<div class="qa"><div class="q">Q7: Struct own type?</div>
+<div class="a"><strong>A:</strong> Only as pointer.</div></div>
+<div class="qa"><div class="q">Q8: Empty struct size?</div>
+<div class="a"><strong>A:</strong> At least 1 byte.</div></div>
+<div class="qa"><div class="q">Q9: Pass struct by value?</div>
+<div class="a"><strong>A:</strong> Yes, entire struct copied.</div></div>
+<div class="qa"><div class="q">Q10: Default enum values?</div>
+<div class="a"><strong>A:</strong> From 0, incrementing.</div></div>
+<div class="nav"><a href="topic-09.html">← 9. Strings (std::string)</a>
+<a href="topic-11.html">→ 11. OOP: Classes & Objects</a></div>
+</body></html>

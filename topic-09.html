@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topic 9: Strings (std::string) — C++ Roadmap — A to Z</title>
+<style>/* theme-dark */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+       line-height: 1.8; font-size: 16px; max-width: 900px; margin: 0 auto;
+       padding: 2rem 1.5rem 4rem; background:#0f172a; color:#e2e8f0; }
+h1 { font-size: 1.9rem; margin: 0 0 .4rem; color:#f8fafc; letter-spacing:-.5px; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 .8rem; color:#7dd3fc;
+     border-bottom: 2px solid #1e293b; padding-bottom:.35rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .5rem; color:#a5b4fc; }
+p { margin: .5rem 0; }
+a { color:#93c5fd; text-decoration:none; }
+a:hover { text-decoration:underline; }
+ul, ol { padding-left: 1.4rem; margin: .5rem 0; }
+li { margin: .3rem 0; }
+pre { background:#0b1120; border:1px solid #1e293b; border-radius:8px;
+      padding: 1rem 1.2rem; overflow-x:auto; line-height:1.6; font-size:.9rem;
+      white-space:pre; }
+code { font-family:'Cascadia Code','Fira Code','JetBrains Mono',Consolas,monospace; }
+p code, li code, td code { background:#1e293b; padding:.1rem .35rem;
+      border-radius:4px; font-size:.9em; }
+.tok-kw { color:#c084fc; } .tok-fn { color:#fbbf24; } .tok-num { color:#f472b6; }
+.tok-c { color:#64748b; font-style:italic; } .tok-s { color:#34d399; }
+.header { border-bottom:3px solid #334155; padding-bottom:1rem; margin-bottom:2rem; }
+.header .sub { color:#94a3b8; font-size:.95rem; }
+.learn, .concepts { background:#111c31; border:1px solid #1e293b;
+      border-radius:10px; padding:1.2rem 1.5rem; margin:1.2rem 0; }
+.learn a { display:inline-block; margin:.15rem .6rem .15rem 0; }
+.problem { background:#111c31; border:1px solid #1e293b; border-left:4px solid #38bdf8;
+      border-radius:8px; padding:1.2rem 1.5rem; margin:1.6rem 0; }
+.problem h4 { margin:.1rem 0 .6rem; color:#f8fafc; font-size:1.02rem; }
+.expected { background:#0b1120; border:1px dashed #334155; border-radius:6px;
+      padding:.6rem 1rem; margin:.6rem 0; }
+.expected::before { content:"Expected output:"; display:block; font-size:.8rem;
+      color:#64748b; margin-bottom:.3rem; text-transform:uppercase; letter-spacing:.5px; }
+.expected pre { border:none; padding:0; background:transparent; margin:0; }
+.points { color:#94a3b8; font-size:.92rem; }
+.qa { background:#111c31; border:1px solid #1e293b; border-radius:8px;
+      padding:1rem 1.5rem; margin:1rem 0; }
+.qa .q { color:#fbbf24; font-weight:600; }
+.qa .a { margin-top:.4rem; }
+.index-card { background:#111c31; border:1px solid #1e293b; border-radius:10px;
+      padding:1rem 1.5rem; margin:.8rem 0; display:block; color:#e2e8f0; }
+.index-card:hover { border-color:#38bdf8; text-decoration:none; }
+.index-card .num { color:#38bdf8; font-weight:700; margin-right:.5rem; }
+.index-card .d { color:#94a3b8; font-size:.9rem; }
+.nav { display:flex; justify-content:space-between; gap:1rem; margin:2.5rem 0 0;
+      padding-top:1.2rem; border-top:1px solid #1e293b; font-size:.95rem; }
+.meta { color:#64748b; font-size:.85rem; margin:.3rem 0 2rem; }
+.badge { display:inline-block; background:#1e293b; color:#7dd3fc; padding:.15rem .6rem;
+      border-radius:999px; font-size:.78rem; margin-right:.4rem; }
+@media print { body{background:#fff;color:#111;} pre,.problem,.qa,.learn,.concepts{background:#f8fafc;border-color:#ddd;} }
+</style></head><body>
+<div class="header"><a href="index.html" style="font-size:.85rem">← C++ Roadmap — A to Z index</a>
+<h1>Topic 9: Strings (std::string)</h1>
+<div class="sub">Constructors, methods, concatenation, substr, find</div></div>
+<p>std::string manages memory with rich methods. Concatenate with +, find with find(), substr() extracts, compare with ==.</p>
+<div class="learn"><h3>Learn From</h3>
+<p>String references.</p>
+<ul><li>C++ std::string — https://cplusplus.com/reference/string/string/</li></ul></div>
+<div class="concepts"><h3>Key Concepts</h3>
+<ul><li>Constructors</li><li>length() and size()</li><li>Concatenation +</li><li>substr(pos, len)</li><li>find() and rfind()</li><li>Comparison operators</li><li>at() and [] access</li><li>c_str() conversion</li></ul></div>
+<h2>Practice Problems &amp; Solutions</h2>
+<div class="problem"><h4>Problem 1</h4>
+<p>Create Hello and print.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;std::cout&lt;&lt;s&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>Hello</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 2</h4>
+<p>Print length of Programming.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Programming&quot;</span>;std::cout&lt;&lt;s.<span class="tok-fn">length</span>()&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>11</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 3</h4>
+<p>Concatenate strings.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>+std::<span class="tok-kw">string</span>(<span class="tok-s">&quot; World&quot;</span>);std::cout&lt;&lt;s&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>Hello World</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 4</h4>
+<p>Substring from Hello World.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello World&quot;</span>;std::cout&lt;&lt;s.<span class="tok-fn">substr</span>(<span class="tok-num">6</span>,<span class="tok-num">5</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>World</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 5</h4>
+<p>Find W in Hello World.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello World&quot;</span>;std::cout&lt;&lt;s.<span class="tok-fn">find</span>(<span class="tok-s">&#x27;W&#x27;</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>6</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 6</h4>
+<p>Compare strings.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> a=<span class="tok-s">&quot;abc&quot;</span>,b=<span class="tok-s">&quot;abd&quot;</span>;std::cout&lt;&lt;(a==b?<span class="tok-s">&quot;equal&quot;</span>:<span class="tok-s">&quot;not equal&quot;</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>not equal</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 7</h4>
+<p>Access third char of Hello.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;std::cout&lt;&lt;s[<span class="tok-num">2</span>]&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>l</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 8</h4>
+<p>Append ! to Hello.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;s+=<span class="tok-s">&quot;!&quot;</span>;std::cout&lt;&lt;s&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>Hello!</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 9</h4>
+<p>Convert to C-string.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+#<span class="tok-kw">include</span> &lt;cstring&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hi&quot;</span>;<span class="tok-kw">const</span> <span class="tok-kw">char</span> *cs=s.<span class="tok-fn">c_str</span>();<span class="tok-kw">for</span>(<span class="tok-kw">int</span> i=<span class="tok-num">0</span>;i&lt;(<span class="tok-kw">int</span>)<span class="tok-fn">strlen</span>(cs);i++)std::cout&lt;&lt;cs[i]&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>H
+i</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<div class="problem"><h4>Problem 10</h4>
+<p>Check starts with H.</p>
+<pre><code>#<span class="tok-kw">include</span> &lt;iostream&gt;
+#<span class="tok-kw">include</span> &lt;<span class="tok-kw">string</span>&gt;
+<span class="tok-kw">int</span> <span class="tok-kw">main</span>(){std::<span class="tok-kw">string</span> s=<span class="tok-s">&quot;Hello&quot;</span>;std::cout&lt;&lt;(s.<span class="tok-fn">find</span>(<span class="tok-s">&#x27;H&#x27;</span>)==<span class="tok-num">0</span>?<span class="tok-s">&quot;yes&quot;</span>:<span class="tok-s">&quot;no&quot;</span>)&lt;&lt;std::endl;<span class="tok-kw">return</span> <span class="tok-num">0</span>;}</code></pre>
+<div class="expected"><pre><code>yes</code></pre></div>
+<p class="points"><strong>Learning points:</strong> </p></div>
+<h2>Quick Questions &amp; Answers</h2>
+<div class="qa"><div class="q">Q1: size() vs length()?</div>
+<div class="a"><strong>A:</strong> Identical.</div></div>
+<div class="qa"><div class="q">Q2: substr() bad position?</div>
+<div class="a"><strong>A:</strong> std::out_of_range.</div></div>
+<div class="qa"><div class="q">Q3: find() not found?</div>
+<div class="a"><strong>A:</strong> std::string::npos.</div></div>
+<div class="qa"><div class="q">Q4: Concat C-string + string?</div>
+<div class="a"><strong>A:</strong> Yes, using +.</div></div>
+<div class="qa"><div class="q">Q5: at() vs []?</div>
+<div class="a"><strong>A:</strong> at() bounds checks; [] does not.</div></div>
+<div class="qa"><div class="q">Q6: c_str()?</div>
+<div class="a"><strong>A:</strong> Returns const pointer to C-string.</div></div>
+<div class="qa"><div class="q">Q7: Clear string?</div>
+<div class="a"><strong>A:</strong> clear() or assign empty.</div></div>
+<div class="qa"><div class="q">Q8: String holds null chars?</div>
+<div class="a"><strong>A:</strong> Yes but c_str() expects null-terminated.</div></div>
+<div class="qa"><div class="q">Q9: == vs compare()?</div>
+<div class="a"><strong>A:</strong> == returns bool; compare() returns 0/neg/pos.</div></div>
+<div class="qa"><div class="q">Q10: Max string size?</div>
+<div class="a"><strong>A:</strong> Limited by size_t.</div></div>
+<div class="nav"><a href="topic-08.html">← 8. Dynamic Memory</a>
+<a href="topic-10.html">→ 10. Structs & Enums</a></div>
+</body></html>
